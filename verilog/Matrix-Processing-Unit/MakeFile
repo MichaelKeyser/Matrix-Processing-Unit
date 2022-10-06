@@ -1,2 +1,2 @@
-mc:
-	iverilog -o mc design/*.v
+mpu:
+	iverilog -o mpu design/*.v
