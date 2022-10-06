@@ -1,0 +1,2 @@
+mau:
+	iverilog -o mau design/*.v

@@ -1,0 +1,2 @@
+lm:
+	iverilog -o lm design/*.v
