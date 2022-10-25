@@ -1,0 +1,47 @@
+Instruction Format: Data_In_1 (2) - Data_In_2 (2) - Ins (2) - Op (2)
+Data_In_1: first BRAM chunk to be added AND the DESTINATION OF THE OPERATION
+Data_In_2: second BRAM chunk to be added
+Data instructions Ins: instruction in relation to host system, nothing (00), load (01), unload (10)
+
+Arithmetic operations: arithmetic operation to perform, adder1 (00), adder2 (01), subtract (10), multiply (11)
+
+
+These instructions are passed to the FSM.
+
+Nothing |   xx-xx-00-xx
+Load    |   aa-xx-01-00 
+Unload  |   aa-xx-01-10 
+Copy    |   aa-dd-01-01
+Clear   |   aa-xx-01-11
+Add1    |   dd-aa-11-00
+Add2    |   dd-aa-11-01
+Sub     |   dd-aa-11-10
+Mult    |   dd-aa-11-11
+
+Use Explanations
+1) Nothing:   xx-xx-00-xx
+Change no signals, anything in process remaiins in process and no new processes are started
+
+2) Load:   aa-xx-01-00
+8-bit input is directed to BRAM chunk aa using a MUX, a start signal is sent to the BRAM to start loading (the BRAM will stop on its own when it has done all loads)
+
+3) Unload:  aa-xx-01-10 
+BRAM chunk aa is directed to the output, a start signal is sent to the BRAM to start unloading (the BRAM will stop on its own when it has done all unloads)
+
+4) Copy:   aa-dd-01-01
+BRAM chunk dd is set to BRAM chunk aa
+
+5) Clear: aa-xx-01-11
+Set BRAM chunk aa to 0
+
+6) Add1: dd-aa-11-00
+Add BRAM chunk dd and BRAM chunk aa and store in dd, use adder 1
+
+7) Add2:   dd-aa-11-01
+Add BRAM chunk dd and BRAM chunk aa and store in dd, use adder 2
+
+8) Sub:   dd-aa-11-10
+Subtract BRAM chunk aa from dd and store in dd.  (Note: order matters with thise one, think dd = dd - aa)
+
+9) Mult:   dd-aa-11-11
+Multiply BRAM chunk aa and BRAM chunk dd and store in dd.
