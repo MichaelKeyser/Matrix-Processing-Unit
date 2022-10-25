@@ -1,2 +1,0 @@
-mc:
-	iverilog -o mc design/*.v

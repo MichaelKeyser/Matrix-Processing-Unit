@@ -1,2 +1,0 @@
-mpu:
-	iverilog -o mpu design/*.v

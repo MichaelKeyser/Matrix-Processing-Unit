@@ -1,12 +1,13 @@
 
 module bram
-#( parameter SIZE = 64)
+#( parameter num_bits = 512)
 (
-	input [2**ADDR_WIDTH-1:0] shhbang
-	input [7:0] data,
-	input wre, wrall, rst, clk,
-	output reg [7:0] q,
-	output reg [2**ADDR_WIDTH-1:0] qall
+	input [num_bits-1:0] chunk_input,
+	input [7:0] host_input,
+	input host_read, chunk_read, rst, clk,
+	output reg [7:0] host_out,
+	output [num_bits-1:0] chunk_out
+	output reg done_flag
 );
 
 	// Declare the RAM variable
