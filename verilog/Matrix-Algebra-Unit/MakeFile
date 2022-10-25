@@ -1,2 +1,4 @@
 mau:
 	iverilog -o mau design/*.v
+add:
+	iverilog -o add design/Adder.v
