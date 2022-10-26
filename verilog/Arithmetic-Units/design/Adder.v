@@ -1,8 +1,7 @@
 module Adder
 #(parameter num_bits = 512)
 (input  [num_bits-1:0] dd, aa,
-output wire[num_bits-1:0] sum,
-output reg done_flag);
+output wire[num_bits-1:0] sum);
 
 genvar i;
 generate
