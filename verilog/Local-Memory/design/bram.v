@@ -5,7 +5,7 @@ module bram
 	input [num_bits-1:0] chunk_input,
 	input [7:0] host_input,
 	input [num_bits/8:0] offset,
-	input host_write, chunk_read, rst, clk,
+	input host_write, chunk_read, host_read ,rst, clk,
 	output reg [7:0] host_out,
 	output [num_bits-1:0] chunk_out
 );
@@ -13,40 +13,35 @@ module bram
 	// Declare the RAM variable
 	reg [num_bits-1:0] ram;
 
-	// RAM Counter
-	integer ram_counter;//Need 9 bits to count up to 512
-	reg reading, writing;
-
 	always @ (posedge clk)
 	begin
 		if (rst)
 		begin
 			for (integer i = 0; i < num_bits; i = i + 1) ram[i] <= 1'b0;
-			ram_counter <= 0;
-			reading <= 0;
-			writing <= 0;
 		end
 
-		if (reading)
+		else if (chunk_read)
 		begin
-			ram[ram_counter*8-:8] = host_input;
-			ram_counter = ram_counter + 1;
+			ram[num_bits-1:0] <= chunk_input[num_bits-1:0];
 		end
 
-		else if (writing) reading <= 0;
-
-		//else if (host_read) reading <= 1;
-		
-		else if (host_write) writing <= 1;
-
-		if (chunk_read)
+		else if (host_write)
 		begin
-			for (integer i = 0; i < num_bits; i = i + 1) ram[i] <= chunk_input[i];
-			ram_counter <= 0;
+			ram[offset-:7] <= host_input[7:0];
+		end
+
+		else if (host_read)
+		begin
+			host_out <= ram[offset-:7];
+		end
+
+		else
+		begin
+			ram <= ram;
 		end
 
 	end
 
-	assign qall = ram;
+	assign chunk_out = ram;
 	
 endmodule
