@@ -4,9 +4,9 @@ module bram
 (
 	input [num_bits-1:0] chunk_input,
 	input [7:0] host_input,
-	input [num_bits/8:0] offset,
-	input host_write, chunk_read, host_read ,rst, clk,
-	output reg [7:0] host_out,
+	input [7:0] offset,
+	input line_read_from_host, chunk_read_from_bram, rst, clk,
+	output [7:0] bram_to_host,
 	output [num_bits-1:0] chunk_out
 );
 
@@ -20,19 +20,14 @@ module bram
 			for (integer i = 0; i < num_bits; i = i + 1) ram[i] <= 1'b0;
 		end
 
-		else if (chunk_read)
+		else if (chunk_read_from_bram)
 		begin
 			ram[num_bits-1:0] <= chunk_input[num_bits-1:0];
 		end
 
-		else if (host_write)
+		else if (line_read_from_host)
 		begin
 			ram[offset-:7] <= host_input[7:0];
-		end
-
-		else if (host_read)
-		begin
-			host_out <= ram[offset-:7];
 		end
 
 		else
@@ -43,5 +38,6 @@ module bram
 	end
 
 	assign chunk_out = ram;
+	assign bram_to_host = ram[offset-:7];
 	
 endmodule
