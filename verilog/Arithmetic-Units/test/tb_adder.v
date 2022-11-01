@@ -11,7 +11,7 @@ Adder #(num_bits) uut
 
 initial begin
 
-
+$display("test");
 $finish;
 end
 
