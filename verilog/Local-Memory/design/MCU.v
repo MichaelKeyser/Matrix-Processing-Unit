@@ -23,7 +23,7 @@ module MCU
 	);
 
 	reg line_write_to_host, line_read_from_host, chunk_read_from_bram;
-	reg [7:0] offset;
+	reg [8:0] offset;
 	reg [5:0] counter;
 
 	always @ (posedge line_read_from_host_en)
@@ -50,7 +50,7 @@ module MCU
 			line_read_from_host = 1'b0;
 			chunk_read_from_bram = 1'b0;
 			line_read_from_host = 1'b0;
-			offset = 8'b0;
+			offset = 9'b0;
 			counter = 6'b0;
 		end
 
