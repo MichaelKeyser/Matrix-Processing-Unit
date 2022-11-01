@@ -1,6 +1,6 @@
 bram:
-	iverilog -o bram design/bram.v test/tb_bram.v
-	vvp bram
+	iverilog -o bram.ext design/bram.v test/tb_bram.v
+	vvp bram.ext
 
 clean:
-	rm -f bram 
+	rm -f bram.ext
