@@ -5,9 +5,9 @@ output wire[num_bits-1:0] sum);
 
 genvar i;
 generate
-    for (i = 0; i < num_bits; i = i + 8) // Go through the 64 8-bit numbers in the 512-bit chunk
+    for (i = 7; i < num_bits; i = i + 8) // Go through the 64 8-bit numbers in the 512-bit chunk
     begin
-        assign sum[i+7:i] = dd[i+7:i] + aa[i+7:i]; // Add each 8-bit number
+       assign sum[i:i-7] = dd[i:i-7] + aa[i:i-7]; // Add each 8-bit number
     end
 endgenerate
 
