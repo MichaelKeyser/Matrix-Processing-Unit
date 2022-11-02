@@ -4,3 +4,7 @@ bram:
 
 clean:
 	rm -f bram.ext
+
+mcu:
+	iverilog -o mcu.ext design/*.v test/tb_mcu.v
+	vvp mcu.ext
