@@ -87,30 +87,27 @@ initial begin
     begin
         $display("Reset Failed");
     end
+    #10;
 
     // Write to host sequentaly and check that it is read back correctly
 
-    line_write_to_host_en = 1'b1;
-    host_input = 8'h0;
-    
-    while (!done_flag) 
-    begin
-        host_input = host_input + 1;
-        #10;
-        line_read_from_host_en = 1'b0;
-    end
-
     line_read_from_host_en = 1'b1;
-    host_input = 8'h0;
+    host_input = 5;
+    #10;
+    line_read_from_host_en = 1'b0;
     
     while (!done_flag) 
     begin
-        host_input = host_input + 1;
+        $display("host_input = %d %d", host_input, uut.offset);
         #10;
-        line_read_from_host_en = 1'b0;
+        host_input = host_input + 1;
     end
 
-    $display("host_input = %d", host_input);
+    for (i = 7; i < num_bits; i = i + 8) 
+    begin
+        $display("%d", chunk_out[i-:8]);
+    end
+
 
     $display("Testing Finished");
     $finish;

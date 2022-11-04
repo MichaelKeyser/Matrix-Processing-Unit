@@ -25,11 +25,12 @@ module mcu
 
 	reg line_write_to_host, line_read_from_host, chunk_read_from_bram;
 	reg [8:0] offset;
-	reg [5:0] counter;
+	reg [6:0] counter;
 
 	always @ (posedge line_read_from_host_en)
 	begin
 		counter <= 6'b0;
+		offset <= 7;
 		done_flag <= 1'b0;
 		line_read_from_host <= 1'b1;
 	end
@@ -37,6 +38,7 @@ module mcu
 	always @ (posedge line_write_to_host_en)
 	begin
 		counter <= 6'b0;
+		offset <= 7;
 		done_flag <= 1'b0;
 		line_write_to_host <= 1'b1;
 	end
@@ -61,8 +63,8 @@ module mcu
 		else if (line_read_from_host)
 		begin
 			counter = counter + 1;
-			offset = counter * 8;
-			if (counter == 63) 
+			offset = offset + 8;
+			if (counter == 64) 
 			begin
 				counter = 0;
 				offset = 0;
@@ -71,11 +73,11 @@ module mcu
 			end
 		end
 	
-		else if (line_write_to_host)
+		else if (line_write_to_host && 0)
 		begin
 			counter = counter + 1;
-			offset = counter * 8;
-			if (counter == 63) 
+			offset = offset + 8;
+			if (counter == 64) 
 			begin
 				counter = 0;
 				offset = 0;
@@ -83,7 +85,8 @@ module mcu
 				done_flag = 1'b1;
 			end
 		end
-		else if(chunk_read_from_bram)
+
+		else if(chunk_read_from_bram && 0)
 		begin
 			chunk_read_from_bram = 1'b0;
 		end
