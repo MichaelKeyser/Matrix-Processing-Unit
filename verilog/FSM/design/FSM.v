@@ -1,11 +1,14 @@
 module FSM
-#(parameter = 512)
+#(parameter num_bits = 512)
 (
     input [7:0] host_instruction,
     input add1_done, add2_done, sub_done, mult_done, bram0_done, bram1_done, bram2_done, bram3_done, clk, reset,
 	output reg [8:0] offset,
-	output reg [1:0] aa_MUX, dd_MUX, bram_MUX, out_MUX, host_out_MUX,
-    output reg busy, bram_in_MUX, b0_en, b1_en, b2_en, b3_en, b0_rst, b1_rst, b2_rst, b3_rst, b0_en1, b1_en1, b2_en1, b3_en1
+	output [1:0] aa_MUX, dd_MUX, bram_MUX, 
+	output reg [1:0] out_MUX, host_out_MUX,
+    output reg busy, bram_in_MUX, b0_rst, b1_rst, b2_rst, b3_rst, 
+	output reg b0_en, b1_en, b2_en, b3_en,//bram enable chunk write
+	output reg b0_en1, b1_en1, b2_en1, b3_en1//bram enable single byte write
 );
 
 parameter [3:0] RESET = 4'h0, IDLE = 4'h0, ADD = 4'h1, SUB = 4'h2, SHIFT = 4'h3, MULT = 4'h4, LOAD = 4'h5, UNLOAD = 4'h6, COPY = 4'h7, CLEAR = 4'h8;
@@ -20,18 +23,19 @@ parameter SHIFT_OP =   8'bXXXX1101;//Add from BRAM to BRAM using addr 2
 parameter SUB_OP =    8'bXXXX1110;//Subtract from BRAM to BRAM
 parameter MULT_OP =   8'bXXXX1111;//Multiply from BRAM to BRAM
 
-parameter B1 = 2'b00;//BRAM 1
-parameter B2 = 2'b01;//BRAM 2
-parameter B3 = 2'b10;//BRAM 3
-parameter B4 = 2'b11;//BRAM 4
+parameter B0 = 2'b00;//BRAM 0
+parameter B1 = 2'b01;//BRAM 1
+parameter B2 = 2'b10;//BRAM 2
+parameter B3 = 2'b11;//BRAM 3
 
 parameter ADDER = 2'b00;//Adder
+parameter SHIFTER = 2'b01;//Shifter
 parameter SUBTRACTOR = 2'b10;//Subtractor
 parameter MULTIPLIER = 2'b11;//Multiplier
-parameter SHIFTER = 2'b01;//Shifter
 
-parameter DD = host_instruction[7-:2];//Shortcut to control lines for DD
-parameter AA = host_instruction[5-:2];//Shortcut to control lines for AA
+wire [1:0] AA, DD;
+assign DD = host_instruction[7:6];//Shortcut to control lines for DD
+assign AA = host_instruction[5:4];//Shortcut to control lines for AA
 
 reg [3:0] state;//Register for the state of the FSM
 reg [5:0] counter;//Register for the counter
@@ -39,9 +43,10 @@ reg [5:0] counter;//Register for the counter
 assign aa_MUX = AA;//Control the AA MUX with the AA bits from the instruction
 assign dd_MUX = DD;//Control the DD MUX with the DD bits from the instruction
 assign bram_MUX = AA;//Control the BRAM MUX with the AA bits from the instruction
+assign host_out_MUX == DD;//Control the host output MUX with the DD bits from the instruction
 
-always @(posedge clk, posedge rst)begin
-	if(rst == 1) state <= RESET;
+always @(posedge clk, posedge reset)begin
+	if(reset == 1) state = RESET;
 
 	busy = 1;//It's busy in all states but IDLE
 
@@ -60,7 +65,7 @@ always @(posedge clk, posedge rst)begin
 			b2_rst = 1;
 			b3_rst = 1;
 
-			state <= IDLE;//Return to IDLE	
+			state = IDLE;//Return to IDLE	
 		end
 
 		IDLE: begin//Check for instruction
@@ -100,9 +105,9 @@ always @(posedge clk, posedge rst)begin
 
 		ADD: begin
 			//Enable correct BRAM
-			if(DD = B0) b0_en = 1;
-			else if(DD = B1) b1_en = 1;
-			else if(DD = B2) b2_en = 1;
+			if(DD == B0) b0_en = 1;
+			else if(DD == B1) b1_en = 1;
+			else if(DD == B2) b2_en = 1;
 			else b3_en = 1;
 
 			out_MUX = ADDER;//Select correct output
@@ -112,9 +117,9 @@ always @(posedge clk, posedge rst)begin
 
 		SUB: begin
 			//Enable correct BRAM
-			if(DD = B0) b0_en = 1;
-			else if(DD = B1) b1_en = 1;
-			else if(DD = B2) b2_en = 1;
+			if(DD == B0) b0_en = 1;
+			else if(DD == B1) b1_en = 1;
+			else if(DD == B2) b2_en = 1;
 			else b3_en = 1;
 
 			out_MUX = SUBTRACTOR;//Select correct output
@@ -124,9 +129,9 @@ always @(posedge clk, posedge rst)begin
 
 		SHIFT: begin
 			//Enable correct BRAM
-			if(DD = B0) b0_en = 1;
-			else if(DD = B1) b1_en = 1;
-			else if(DD = B2) b2_en = 1;
+			if(DD == B0) b0_en = 1;
+			else if(DD == B1) b1_en = 1;
+			else if(DD == B2) b2_en = 1;
 			else b3_en = 1;
 
 			out_MUX = SHIFTER;//Select correct output
@@ -136,9 +141,9 @@ always @(posedge clk, posedge rst)begin
 
 		MULT: begin
 			//Enable correct BRAM
-			if(DD = B0) b0_en = 1;
-			else if(DD = B1) b1_en = 1;
-			else if(DD = B2) b2_en = 1;
+			if(DD == B0) b0_en = 1;
+			else if(DD == B1) b1_en = 1;
+			else if(DD == B2) b2_en = 1;
 			else b3_en = 1;
 
 			out_MUX = MULTIPLIER;//Select correct output
@@ -148,19 +153,16 @@ always @(posedge clk, posedge rst)begin
 
 		LOAD: begin
 			//Enable correct BRAM single load
-			if(DD = B0) b0_en1 = 1;
-			else if(DD = B1) b1_en1 = 1;
-			else if(DD = B2) b2_en 1= 1;
+			if(DD == B0) b0_en1 = 1;
+			else if(DD == B1) b1_en1 = 1;
+			else if(DD == B2) b2_en1 = 1;
 			else b3_en1 = 1;
 
-			if(counter >= 63) begin//Check if done 64 loads
-				state = IDLE;//Return to IDLE
-			end
-
+			if(counter >= 63) state = IDLE;//If done 64 loads, return to IDLE
 			else state = LOAD;//Stay in LOAD
 
 			counter = counter + 1;//Increment counter
-			offset = offset + 7;//Increment offset by 7
+			offset = offset + 8;//Increment offset by 8
 		end
 
 		UNLOAD: begin
@@ -168,15 +170,14 @@ always @(posedge clk, posedge rst)begin
 			else state = UNLOAD;//Stay in UNLOAD
 
 			counter = counter + 1;//Increment counter
-			offset = offset + 7;//Increment offset by 7
-
+			offset = offset + 8;//Increment offset by 8
 		end
 
 		COPY: begin
 			//Enable correct BRAM
-			if(DD = B0) b0_en = 1;
-			else if(DD = B1) b1_en = 1;
-			else if(DD = B2) b2_en = 1;
+			if(DD == B0) b0_en = 1;
+			else if(DD == B1) b1_en = 1;
+			else if(DD == B2) b2_en = 1;
 			else b3_en = 1;
 
 			bram_in_MUX = 1;//Select BRAM input
@@ -185,9 +186,9 @@ always @(posedge clk, posedge rst)begin
 		end
 
 		CLEAR: begin
-			if(DD = B0) b0_rst = 1;
-			else if(DD = B1) b1_rst = 1;
-			else if(DD = B2) b2_rst = 1;
+			if(DD == B0) b0_rst = 1;
+			else if(DD == B1) b1_rst = 1;
+			else if(DD == B2) b2_rst = 1;
 			else b3_rst = 1;
 
 			state = IDLE;//Return to IDLE
