@@ -10,5 +10,4 @@ generate
        assign sum[i:i-7] = dd[i:i-7] + aa[i:i-7]; // Add each 8-bit number
     end
 endgenerate
-
 endmodule
