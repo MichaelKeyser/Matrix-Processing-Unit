@@ -11,5 +11,9 @@ sub:
 	iverilog -o sub.ext design/Subtractor.v test/tb_Subtractor.v
 	vvp sub.ext
 
+shift:
+	iverilog -o shift.ext design/Shifter.v test/tb_Shifter.v
+	vvp shift.ext
+
 clean:
-	rm -f adder.ext mult.ext sub.ext
+	rm -f adder.ext mult.ext sub.ext shift.ext
