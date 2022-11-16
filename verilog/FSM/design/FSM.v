@@ -2,16 +2,19 @@ module FSM
 #(parameter num_bits = 512)
 (
     input [7:0] host_instruction,
-    input add1_done, add2_done, sub_done, mult_done, bram0_done, bram1_done, bram2_done, bram3_done, clk, reset,
+    input clk, reset,
 	output reg [8:0] offset,
-	output [1:0] aa_MUX, dd_MUX, bram_MUX, 
-	output reg [1:0] out_MUX, host_out_MUX,
+	output [1:0] aa_MUX, dd_MUX, bram_MUX,  host_out_MUX,
+	output reg [1:0] out_MUX,
     output reg busy, bram_in_MUX, b0_rst, b1_rst, b2_rst, b3_rst, 
 	output reg b0_en, b1_en, b2_en, b3_en,//bram enable chunk write
 	output reg b0_en1, b1_en1, b2_en1, b3_en1//bram enable single byte write
 );
 
-parameter [3:0] RESET = 4'h0, IDLE = 4'h0, ADD = 4'h1, SUB = 4'h2, SHIFT = 4'h3, MULT = 4'h4, LOAD = 4'h5, UNLOAD = 4'h6, COPY = 4'h7, CLEAR = 4'h8;
+parameter [3:0] IDLE = 4'h0, ADD = 4'h1, SUB = 4'h2, 
+				SHIFT = 4'h3, MULT = 4'h4, LOAD = 4'h5, 
+				UNLOAD = 4'h6, COPY = 4'h7, CLEAR = 4'h8, 
+				RESET = 4'h9;
 					 
 parameter NA_OP =     8'bXXXX00XX;//Do Nothing
 parameter LOAD_OP =   8'bXXXX0100;//Load to BRAM from Host
@@ -43,7 +46,7 @@ reg [5:0] counter;//Register for the counter
 assign aa_MUX = AA;//Control the AA MUX with the AA bits from the instruction
 assign dd_MUX = DD;//Control the DD MUX with the DD bits from the instruction
 assign bram_MUX = AA;//Control the BRAM MUX with the AA bits from the instruction
-assign host_out_MUX == DD;//Control the host output MUX with the DD bits from the instruction
+assign host_out_MUX = DD;//Control the host output MUX with the DD bits from the instruction
 
 always @(posedge clk, posedge reset)begin
 	if(reset == 1) state = RESET;
@@ -73,34 +76,36 @@ always @(posedge clk, posedge reset)begin
 			counter = 0;//Reset counter
 			offset = 7;//Reset offset
 
-			//Check for instruction and set state
-			if(host_instruction == LOAD_OP) begin
-				state = LOAD;
-			end
-			else if(host_instruction == UNLOAD_OP) begin
-				state = UNLOAD;
-			end
-			else if(host_instruction == COPY_OP) begin
-				state = COPY;
-			end
-			else if(host_instruction == CLEAR_OP) begin
-				state = CLEAR;
-			end
-			else if(host_instruction == ADD_OP) begin
-				state = ADD;
-			end
-			else if(host_instruction == SHIFT_OP) begin
-				state = SHIFT;
-			end
-			else if(host_instruction == SUB_OP) begin
-				state = SUB;
-			end
-			else if(host_instruction == MULT_OP) begin
-				state = MULT;
-			end
-			else begin
-				state = IDLE;//Return to IDLE
-			end
+			casex (host_instruction)
+				LOAD_OP: begin//Load from host
+					state = LOAD;
+				end
+				UNLOAD_OP: begin//Unload to host
+					state = UNLOAD;
+				end
+				COPY_OP: begin//Copy from BRAM to BRAM
+					state = COPY;
+				end
+				CLEAR_OP: begin//Clear BRAM
+					state = CLEAR;
+				end
+				ADD_OP: begin//Add from BRAM to BRAM
+					state = ADD;
+				end
+				SHIFT_OP: begin//Shift from BRAM to BRAM
+					state = SHIFT;
+				end
+				SUB_OP: begin//Subtract from BRAM to BRAM
+					state = SUB;
+				end
+				MULT_OP: begin//Multiply from BRAM to BRAM
+					state = MULT;
+				end
+				NA_OP: begin//Do nothing
+					state = IDLE;
+				end
+				default: state = IDLE;//Do nothing
+			endcase
 		end
 
 		ADD: begin
@@ -194,7 +199,7 @@ always @(posedge clk, posedge reset)begin
 			state = IDLE;//Return to IDLE
 		end
 		
-		default: state = RESET;//Reset if something goes wrong
+		default: state = IDLE;//Reset if something goes wrong
 	endcase
 end
 
