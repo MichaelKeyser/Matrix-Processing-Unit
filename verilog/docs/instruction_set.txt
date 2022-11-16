@@ -13,8 +13,8 @@ Load    |   dd-xx-01-00
 Unload  |   dd-xx-01-10 
 Copy    |   dd-aa-01-01
 Clear   |   dd-xx-01-11
-Add1    |   dd-aa-11-00
-Add2    |   dd-aa-11-01
+Add     |   dd-aa-11-00
+Shift   |   dd-aa-11-01
 Sub     |   dd-aa-11-10
 Mult    |   dd-aa-11-11
 
@@ -34,11 +34,11 @@ BRAM chunk dd is set to BRAM chunk aa
 5) Clear: aa-xx-01-11
 Set BRAM chunk aa to 0
 
-6) Add1: dd-aa-11-00
+6) Add: dd-aa-11-00
 Add BRAM chunk dd and BRAM chunk aa and store in dd, use adder 1
 
-7) Add2:   dd-aa-11-01
-Add BRAM chunk dd and BRAM chunk aa and store in dd, use adder 2
+7) Shift:   dd-aa-11-01
+Bitwise left shift BRAM chunk dd by BRAM chunk aa and store in dd
 
 8) Sub:   dd-aa-11-10
 Subtract BRAM chunk aa from dd and store in dd.  (Note: order matters with thise one, think dd = dd - aa)
