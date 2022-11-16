@@ -405,6 +405,59 @@ initial begin
         #10;
     end
 
+    /* TESTING SUB COMMAND FOR ALL BRAMS */
+    host_instruction = 8'b00_01_11_10;//BRAM 0 = BRAM 0 - BRAM 1
+    #20;
+    if(b_en != 4'b0001 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B1 || dd_MUX != B0 || out_MUX != SUBTRACTOR || bram_in_MUX != 0) begin
+        $display("BRAM 0 = BRAM 0 - BRAM 1: Failed");
+        $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
+        $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
+        $finish;
+    end
+    while(busy) begin
+        host_instruction = 8'b00000000;
+        #10;
+    end
+
+    host_instruction = 8'b01_10_11_10;//BRAM 1 = BRAM 1 - BRAM 2
+    #20;
+    if(b_en != 4'b0010 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B2 || dd_MUX != B1 || out_MUX != SUBTRACTOR || bram_in_MUX != 0) begin
+        $display("BRAM 1 = BRAM 1 - BRAM 2: Failed");
+        $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
+        $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
+        $finish;
+    end
+    while(busy) begin
+        host_instruction = 8'b00000000;
+        #10;
+    end
+
+    host_instruction = 8'b10_11_11_10;//BRAM 2 = BRAM 2 - BRAM 3
+    #20;
+    if(b_en != 4'b0100 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B3 || dd_MUX != B2 || out_MUX != SUBTRACTOR || bram_in_MUX != 0) begin
+        $display("BRAM 0 = BRAM 0 - BRAM 1: Failed");
+        $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
+        $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
+        $finish;
+    end
+    while(busy) begin
+        host_instruction = 8'b00000000;
+        #10;
+    end
+
+    host_instruction = 8'b11_00_11_10;//BRAM 3 = BRAM 3 - BRAM 0
+    #20;
+    if(b_en != 4'b1000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B0 || dd_MUX != B3 || out_MUX != SUBTRACTOR || bram_in_MUX != 0) begin
+        $display("BRAM 0 = BRAM 0 - BRAM 1: Failed");
+        $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
+        $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
+        $finish;
+    end
+    while(busy) begin
+        host_instruction = 8'b00000000;
+        #10;
+    end
+
     $finish;
 end
 
