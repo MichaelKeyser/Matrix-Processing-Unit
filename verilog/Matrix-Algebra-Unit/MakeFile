@@ -1,4 +1,3 @@
 mau:
-	iverilog -o mau design/*.v
-add:
-	iverilog -o add design/Adder.v
+	iverilog -o mau.ext design/*.v test/*.v ../Local-Memory/design/*.v ../MUX/design/*.v 
+	vvp mau.ext
