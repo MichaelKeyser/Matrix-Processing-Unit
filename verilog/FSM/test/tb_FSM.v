@@ -25,7 +25,7 @@ FSM #(.num_bits(num_bits))uut (
     .host_instruction(host_instruction),
     .clk(clk), .reset(reset),
     .offset(offset),
-    .aa_MUX(aa_MUX), .dd_MUX(dd_MUX), .bram_MUX(bram_MUX),
+    .aa_MUX(aa_MUX), .dd_MUX(dd_MUX),
     .out_MUX(out_MUX), .host_out_MUX(host_out_MUX),
     .busy(busy), .bram_in_MUX(bram_in_MUX), .b0_rst(b0_rst), .b1_rst(b1_rst), .b2_rst(b2_rst), .b3_rst(b3_rst),
     .b0_en(b0_en), .b1_en(b1_en), .b2_en(b2_en), .b3_en(b3_en),
@@ -196,7 +196,7 @@ initial begin
     /* TESTING COPY COMMAND FOR ALL BRAMS */
     host_instruction = 8'b01_00_01_01;//COPY BRAM 0 to BRAM 1
     #20;
-    if(b_en != 4'b0010 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || bram_MUX != B0 || bram_in_MUX != 1'b1) begin
+    if(b_en != 4'b0010 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B0 || bram_in_MUX != 1'b1) begin
         $display("COPY BRAM 0 to BRAM 1: Failed");
         $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
         $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
@@ -209,7 +209,7 @@ initial begin
 
     host_instruction = 8'b10_01_01_01;//COPY BRAM 1 to BRAM 2
     #20;
-    if(b_en != 4'b0100 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || bram_MUX != B1 || bram_in_MUX != 1'b1) begin
+    if(b_en != 4'b0100 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B1 || bram_in_MUX != 1'b1) begin
         $display("COPY BRAM 1 to BRAM 2: Failed");
         $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
         $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
@@ -222,7 +222,7 @@ initial begin
 
     host_instruction = 8'b11_10_01_01;//COPY BRAM 2 to BRAM 3
     #20;
-    if(b_en != 4'b1000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || bram_MUX != B2 || bram_in_MUX != 1'b1) begin
+    if(b_en != 4'b1000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B2 || bram_in_MUX != 1'b1) begin
         $display("COPY BRAM 2 to BRAM 3: Failed");
         $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
         $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);
@@ -235,7 +235,7 @@ initial begin
 
     host_instruction = 8'b00_11_01_01;//COPY BRAM 3 to BRAM 0
     #20;
-    if(b_en != 4'b0001 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || bram_MUX != B3 || bram_in_MUX != 1'b1) begin
+    if(b_en != 4'b0001 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || aa_MUX != B3 || bram_in_MUX != 1'b1) begin
         $display("COPY BRAM 3 to BRAM 0: Failed");
         $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
         $display("bram_in_MUX = %d, bram_MUX = %b", bram_in_MUX, bram_MUX);

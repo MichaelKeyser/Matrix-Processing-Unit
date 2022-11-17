@@ -3,8 +3,10 @@ module MAU
 (
     input [7:0] host_instruction, data_in,
     input clk, reset,
-    output [7:0] data_out,
-    output busy_flag
+    output wire  [7:0] data_out,
+    output wire busy
 );
+
+
 
 endmodule

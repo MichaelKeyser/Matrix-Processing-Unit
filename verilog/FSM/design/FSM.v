@@ -4,7 +4,7 @@ module FSM
     input [7:0] host_instruction,
     input clk, reset,
 	output reg [8:0] offset,
-	output [1:0] aa_MUX, dd_MUX, bram_MUX,  host_out_MUX,
+	output [1:0] aa_MUX, dd_MUX, host_out_MUX,
 	output reg [1:0] out_MUX,
     output reg busy, bram_in_MUX, b0_rst, b1_rst, b2_rst, b3_rst, 
 	output reg b0_en, b1_en, b2_en, b3_en,//bram enable chunk write
@@ -45,7 +45,6 @@ reg [5:0] counter;//Register for the counter
 
 assign aa_MUX = AA;//Control the AA MUX with the AA bits from the instruction
 assign dd_MUX = DD;//Control the DD MUX with the DD bits from the instruction
-assign bram_MUX = AA;//Control the BRAM MUX with the AA bits from the instruction
 assign host_out_MUX = DD;//Control the host output MUX with the DD bits from the instruction
 
 always @(posedge clk, posedge reset)begin
