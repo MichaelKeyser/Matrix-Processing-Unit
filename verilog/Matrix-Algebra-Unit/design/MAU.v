@@ -148,8 +148,6 @@ mux4to1#(8) HOST_OUT_MUX
     .out(data_out)
 );
 
-
-
 // BRAM input select mux
 wire[num_bits-1:0] BRAM_copy_mux_out;
 wire BRAM_copy_mux_sel;
@@ -163,8 +161,34 @@ mux2to1 #(num_bits) BRAM_IN_MUX
 );
 
 
+/************** Arithmetic Units **************/
+Adder #(num_bits) ADDER
+(
+   .aa(aa_mux_out),
+   .dd(dd_mux_out),
+   .sum(adder_out)
+);
 
+Shifter#(num_bits) SHIFT
+(
+   .aa(aa_mux_out),
+   .dd(dd_mux_out),
+   .shift(shifter_out)
+);
 
+Subtractor#(num_bits) SUBTRACTOR
+(
+   .aa(aa_mux_out),
+   .dd(dd_mux_out),
+   .difference(subtractor_out)
+);
+
+Multiplier#(num_bits) MULTIPLIER
+(
+   .aa(aa_mux_out),
+   .dd(dd_mux_out),
+   .product(multiplier_out)
+);
 
 
 endmodule
