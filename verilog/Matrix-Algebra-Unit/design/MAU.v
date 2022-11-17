@@ -4,7 +4,7 @@ module MAU
     input [7:0] host_instruction, data_in,
     input clk, reset,
     output wire  [7:0] data_out,
-    output wire busy
+    output wire busy_flag
 );
 
 parameter num_bits = matrix_dim * matrix_dim * 8;
@@ -137,15 +137,16 @@ mux4to1#(num_bits) ARITHMETIC_MUX
     .out(arithmetic_mux_out)
 );
 
-// BRAM copy MUX
-mux4to1#(num_bits) BRAM_COPY_MUX 
+
+mux4to1#(8) HOST_OUT_MUX
 (
-    .in0(b0)
+    .in0(b0_bram_to_host),
+    .in1(b1_bram_to_host),
+    .in2(b2_bram_to_host),
+    .in3(b3_bram_to_host),
+    .sel(dd_mux_sel),
+    .out(data_out)
 );
-
-
-
-
 
 
 
@@ -156,10 +157,11 @@ wire BRAM_copy_mux_sel;
 mux2to1 #(num_bits) BRAM_IN_MUX
 (
     .in0(arithmetic_mux_out),
-    .in1(BRAM_copy_mux_out),
+    .in1(aa_mux_out),
     .sel(BRAM_in_mux_sel),
     .out(chunk_input)
 );
+
 
 
 
