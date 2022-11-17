@@ -16,7 +16,7 @@ reg [7:0] host_instruction;
 reg clk, reset;
 wire [8:0] offset;
 wire [1:0] aa_MUX, dd_MUX, bram_MUX;
-wire [1:0] out_MUX, host_out_MUX;
+wire [1:0] out_MUX;
 wire busy, bram_in_MUX, b0_rst, b1_rst, b2_rst, b3_rst;
 wire b0_en, b1_en, b2_en, b3_en;//bram enable chunk write
 wire b0_en1, b1_en1, b2_en1, b3_en1;//bram enable single byte write
@@ -26,7 +26,7 @@ FSM #(.num_bits(num_bits))uut (
     .clk(clk), .reset(reset),
     .offset(offset),
     .aa_MUX(aa_MUX), .dd_MUX(dd_MUX),
-    .out_MUX(out_MUX), .host_out_MUX(host_out_MUX),
+    .out_MUX(out_MUX),
     .busy(busy), .bram_in_MUX(bram_in_MUX), .b0_rst(b0_rst), .b1_rst(b1_rst), .b2_rst(b2_rst), .b3_rst(b3_rst),
     .b0_en(b0_en), .b1_en(b1_en), .b2_en(b2_en), .b3_en(b3_en),
     .b0_en1(b0_en1), .b1_en1(b1_en1), .b2_en1(b2_en1), .b3_en1(b3_en1)
@@ -134,7 +134,7 @@ initial begin
     #10;
     for(i = 0; i < 64; i = i + 1)begin
         #10;
-        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || host_out_MUX != B0) begin
+        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || dd_MUX != B0) begin
             $display("UNLOAD BRAM 0 to Host: Failed on i = %d", i);
             $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
             $display("counter = %d, bram_MUX = %d", uut.counter, uut.DD);
@@ -149,7 +149,7 @@ initial begin
     #10;
     for(i = 0; i < 64; i = i + 1)begin
         #10;
-        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || host_out_MUX != B1) begin
+        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || dd_MUX != B1) begin
             $display("UNLOAD BRAM 1 to Host: Failed on i = %d", i);
             $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
             $display("counter = %d, bram_MUX = %b", uut.counter, bram_MUX);
@@ -165,7 +165,7 @@ initial begin
     #10;
     for(i = 0; i < 64; i = i + 1)begin
         #10;
-        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || host_out_MUX != B2) begin
+        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || dd_MUX != B2) begin
             $display("UNLOAD BRAM 2 to Host: Failed on i = %d", i);
             $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
             $display("counter = %d, bram_MUX = %b", uut.counter, bram_MUX);
@@ -181,10 +181,9 @@ initial begin
     #10;
     for(i = 0; i < 64; i = i + 1)begin
         #10;
-        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || host_out_MUX != B3) begin
+        if(b_en != 4'b0000 || b_en1 != 4'b0000 || b_rst != 4'b0000 || !busy || dd_MUX != B3) begin
             $display("UNLOAD BRAM 3 to Host: Failed on i = %d", i);
             $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
-            $display("counter = %d, bram_MUX = %b", uut.counter, host_out_MUX);
             $finish;
         end
     end
