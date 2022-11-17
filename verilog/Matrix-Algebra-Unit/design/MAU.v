@@ -2,15 +2,27 @@ module MAU
 #(parameter matrix_dim = 8)
 (
     input [7:0] host_instruction, data_in,
-    input clk, reset,
+    input clk, rst,
     output wire  [7:0] data_out,
     output wire busy_flag
 );
 
 parameter num_bits = matrix_dim * matrix_dim * 8;
 
-// Global wires
-wire  rst, clk;
+
+/************** FSM **************/
+FSM #(num_bits)CHIP_FSM 
+(
+    .host_instruction(host_instruction),
+    .clk(clk), .reset(rst),
+    .offset(offset),
+    .aa_MUX(aa_mux_sel), .dd_MUX(dd_mux_sel),
+    .out_MUX(arithmetic_mux_out_sel),
+    .busy(busy_flag), .bram_in_MUX(BRAM_in_mux_sel), .b0_rst(b0_rst), .b1_rst(b1_rst), .b2_rst(b2_rst), .b3_rst(b3_rst),
+    .b0_en(b0_chunk_read_from_bram), .b1_en(b1_chunk_read_from_bram), .b2_en(b2_chunk_read_from_bram), .b3_en(b3_chunk_read_from_bram),
+    .b0_en1(b0_line_read_from_host), .b1_en1(b1_line_read_from_host), .b2_en1(b2_line_read_from_host), .b3_en1(b3_line_read_from_host)
+);
+
 
 /************** BRAMs **************/
 
@@ -32,7 +44,7 @@ bram #(.num_bits(num_bits)) B0
 		.offset(offset),
 		.line_read_from_host(b0_line_read_from_host),
 		.chunk_read_from_bram(b0_chunk_read_from_bram),
-		.rst(rst),
+		.rst(b0_rst),
 		.clk(clk),
 		.bram_to_host(b0_bram_to_host),
 		.chunk_out(b0_chunk_out)
@@ -50,7 +62,7 @@ bram #(.num_bits(num_bits)) B1
 		.offset(offset),
 		.line_read_from_host(b1_line_read_from_host),
 		.chunk_read_from_bram(b1_chunk_read_from_bram),
-		.rst(rst),
+		.rst(b1_rst),
 		.clk(clk),
 		.bram_to_host(b1_bram_to_host),
 		.chunk_out(b1_chunk_out)
@@ -68,7 +80,7 @@ bram #(.num_bits(num_bits)) B2
 		.offset(offset),
 		.line_read_from_host(b2_line_read_from_host),
 		.chunk_read_from_bram(b2_chunk_read_from_bram),
-		.rst(rst),
+		.rst(b2_rst),
 		.clk(clk),
 		.bram_to_host(b2_bram_to_host),
 		.chunk_out(b2_chunk_out)
@@ -86,7 +98,7 @@ bram #(.num_bits(num_bits)) B3
 		.offset(offset),
 		.line_read_from_host(b3_line_read_from_host),
 		.chunk_read_from_bram(b3_chunk_read_from_bram),
-		.rst(rst),
+		.rst(b3_rst),
 		.clk(clk),
 		.bram_to_host(b3_bram_to_host),
 		.chunk_out(b3_chunk_out)
@@ -125,7 +137,7 @@ mux4to1#(num_bits) DD_MUX
 
 // Arithmetic units output mux
 wire [num_bits-1:0] adder_out, shifter_out, subtractor_out, multiplier_out, arithmetic_mux_out;
-wire [1:0] arithmetic_mux_sel;
+wire [1:0] arithmetic_mux_out_sel;
 
 mux4to1#(num_bits) ARITHMETIC_MUX
 (
@@ -133,7 +145,7 @@ mux4to1#(num_bits) ARITHMETIC_MUX
     .in1(shifter_out),
     .in2(subtractor_out),
     .in3(multiplier_out),
-    .sel(arithmetic_mux_sel),
+    .sel(arithmetic_mux_out_sel),
     .out(arithmetic_mux_out)
 );
 
@@ -189,6 +201,7 @@ Multiplier#(num_bits) MULTIPLIER
    .dd(dd_mux_out),
    .product(multiplier_out)
 );
+
 
 
 endmodule
