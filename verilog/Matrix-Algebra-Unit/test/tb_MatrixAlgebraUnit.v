@@ -22,6 +22,7 @@ parameter BUSY = 1'b1;
 always begin
     #5;
     clk = ~clk;
+    if(uut.b0_line_read_from_host) $display("data_in = %h", data_in);
 end
 
 integer i;
