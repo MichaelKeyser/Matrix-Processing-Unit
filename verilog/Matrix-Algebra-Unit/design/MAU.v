@@ -31,6 +31,8 @@ wire [num_bits-1:0] chunk_input;
 wire [7:0] host_input;
 wire [8:0] offset;
 assign host_input = data_in;
+wire [1:0] BRAM_in_mux_sel;
+wire b0_rst, b1_rst, b2_rst, b3_rst;
 
 
 // BRAM0
