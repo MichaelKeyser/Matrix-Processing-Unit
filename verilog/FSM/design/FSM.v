@@ -59,6 +59,10 @@ always @(posedge clk, posedge reset)begin
 
 	bram_in_MUX = 0;//Only COPY sets to 1
 
+	out_MUX = 0;//Default to ADDER
+	counter = counter;//Keep the counter the same
+	offset = offset;//Keep the offset the same
+
 	case(state)
 		RESET: begin//Reset all BRAMS and state
 			b0_rst = 1;
