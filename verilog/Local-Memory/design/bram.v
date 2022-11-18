@@ -17,7 +17,7 @@ module bram
 	begin
 		if (rst)
 		begin
-			for (integer i = 0; i < num_bits; i = i + 1) ram[i] <= 1'b0;
+			ram <= 0;
 		end
 
 		else if (chunk_read_from_bram)

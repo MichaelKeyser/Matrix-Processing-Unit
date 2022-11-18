@@ -30,6 +30,7 @@ FSM #(num_bits)CHIP_FSM
 wire [num_bits-1:0] chunk_input;
 wire [7:0] host_input;
 wire [8:0] offset;
+assign host_input = data_in;
 
 
 // BRAM0
