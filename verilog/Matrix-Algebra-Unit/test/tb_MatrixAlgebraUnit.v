@@ -47,7 +47,7 @@ if(busy_flag == BUSY) $display("NOP failed\n");
 // BRAM 0
 #10;
 test_load_val = 8'b0;
-data_in = 8'b1000001;
+data_in = 8'b10000001;
 host_instruction = 8'b00_00_01_00;//LOAD from host to BRAM 0
 
 do = 1;

@@ -107,7 +107,7 @@ initial begin
         #10;
         if (bram_to_host != test_input)
             begin
-                $display("offset[%d] = %d %d", i, bram_to_host, host_input);
+                $display("offset[%d] = %d %d", i, bram_to_host, test_input);
             end
         test_input = test_input + 1;
     end
