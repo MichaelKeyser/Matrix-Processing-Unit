@@ -43,8 +43,8 @@ assign AA = host_instruction[5:4];//Shortcut to control lines for AA
 reg [3:0] state;//Register for the state of the FSM
 reg [5:0] counter;//Register for the counter
 
-assign aa_MUX = AA;//Control the AA MUX with the AA bits from the instruction
-assign dd_MUX = DD;//Control the DD MUX with the DD bits from the instruction
+assign aa_MUX = host_instruction[5:4];//Control the AA MUX with the AA bits from the instruction
+assign dd_MUX = host_instruction[7:6];//Control the DD MUX with the DD bits from the instruction
 
 always @(posedge clk, posedge reset)begin
 	if(reset == 1) state = RESET;
@@ -59,7 +59,7 @@ always @(posedge clk, posedge reset)begin
 
 	bram_in_MUX = 0;//Only COPY sets to 1
 
-	out_MUX = 0;//Default to ADDER
+	out_MUX = out_MUX;//Keep the same output MUX
 	counter = counter;//Keep the counter the same
 	offset = offset;//Keep the offset the same
 
@@ -76,7 +76,7 @@ always @(posedge clk, posedge reset)begin
 		IDLE: begin//Check for instruction
 			busy = 0;//Indicate that it's not busy
 			counter = 0;//Reset counter
-			offset = 7;//Reset offset
+			offset = -1;//Reset offset
 
 			casex (host_instruction)
 				LOAD_OP: begin//Load from host
