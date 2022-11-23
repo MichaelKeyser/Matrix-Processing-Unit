@@ -1,6 +1,35 @@
 #!/bin/tcsh -f
 
+echo "Running test benches, errors will appear in the terminal"
 
-set dir = 3
-echo "Testing Aritmetic Units"
+echo "Testing Aritmetic Units:"
 
+cd Arithmetic-Units
+make -s adder
+make -s sub
+make -s shift
+make -s mult
+cd ..
+
+echo "Testing MUX: "
+cd MUX
+make -s mux2
+make -s mux4
+cd ..
+
+echo "Testing Local Memory: "
+cd Local-Memory
+make -s bram
+cd ..
+
+echo "Testing Finite State Machine: "
+cd FSM
+make -s fsm
+cd ..
+
+echo "Testing Matrix Algebra Unit:"
+cd Matrix-Algebra-Unit
+make -s mau
+cd ..
+
+echo "All tests finished"
