@@ -511,7 +511,6 @@ initial begin
         #10;
     end
 
-    $display("All tests passed successfully");
 
     $finish;
 end

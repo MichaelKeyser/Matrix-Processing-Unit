@@ -20,10 +20,10 @@ initial begin
     in1 = 8'b11111111;
     sel = 1'b0;
     #10;
-    $display("%b", out);
+    if(out != 8'b00000000) $display("Test 0 failed.");
     sel = 1'b1;
     #10;
-    $display("%b", out);
+    if(out != 8'b11111111) $display("Test 1 failed.");
     $finish;
 end
 

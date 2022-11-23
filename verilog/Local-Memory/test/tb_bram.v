@@ -112,7 +112,6 @@ initial begin
         test_input = test_input + 1;
     end
 
-    $display("Testing Finished");
     $finish;
 end
 endmodule

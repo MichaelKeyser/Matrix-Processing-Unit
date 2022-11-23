@@ -1,0 +1,6 @@
+#!/bin/tcsh -f
+
+
+set dir = 3
+echo "Testing Aritmetic Units"
+
