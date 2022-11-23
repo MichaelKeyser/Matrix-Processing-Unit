@@ -93,15 +93,19 @@ always @(posedge clk, posedge reset)begin
 				end
 				ADD_OP: begin//Add from BRAM to BRAM
 					state = ADD;
+					out_MUX = ADDER;//Select correct output
 				end
 				SHIFT_OP: begin//Shift from BRAM to BRAM
 					state = SHIFT;
+					out_MUX = SHIFTER;//Select correct output
 				end
 				SUB_OP: begin//Subtract from BRAM to BRAM
 					state = SUB;
+					out_MUX = SUBTRACTOR;//Select correct output
 				end
 				MULT_OP: begin//Multiply from BRAM to BRAM
 					state = MULT;
+					out_MUX = MULTIPLIER;//Select correct output
 				end
 				NA_OP: begin//Do nothing
 					state = IDLE;
