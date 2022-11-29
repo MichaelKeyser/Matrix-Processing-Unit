@@ -46,7 +46,7 @@ reg [5:0] counter;//Register for the counter
 assign aa_MUX = host_instruction[5:4];//Control the AA MUX with the AA bits from the instruction
 assign dd_MUX = host_instruction[7:6];//Control the DD MUX with the DD bits from the instruction
 
-always @(posedge clk, posedge reset)begin
+always @(posedge clk)begin
 	if(reset == 1) state = RESET;
 
 	busy = 1;//It's busy in all states but IDLE
