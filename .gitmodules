@@ -1,0 +1,3 @@
+[submodule "tsmc_template"]
+	path = tsmc_template
+	url = git@github.com:lnis-uofu/tsmc_template.git
