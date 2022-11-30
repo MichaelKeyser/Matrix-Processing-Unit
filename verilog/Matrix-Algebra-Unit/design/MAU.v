@@ -9,6 +9,49 @@ module MAU
 
 parameter num_bits = matrix_dim * matrix_dim * 8;
 
+// Wires to all BRAMs
+wire [num_bits-1:0] chunk_input;
+wire [7:0] host_input;
+wire [8:0] offset;
+assign host_input = data_in;
+wire BRAM_in_mux_sel;
+wire b0_rst, b1_rst, b2_rst, b3_rst;
+
+
+// BRAM0
+wire [num_bits-1:0] b0_chunk_out;
+wire [7:0] b0_bram_to_host;
+wire b0_line_read_from_host, b0_chunk_read_from_bram;
+
+// BRAM1
+wire [num_bits-1:0] b1_chunk_out;
+wire [7:0] b1_bram_to_host;
+wire b1_line_read_from_host, b1_chunk_read_from_bram;
+
+// BRAM2
+wire [num_bits-1:0] b2_chunk_out;
+wire [7:0] b2_bram_to_host;
+wire b2_line_read_from_host, b2_chunk_read_from_bram;
+
+// BRAM3
+wire [num_bits-1:0] b3_chunk_out;
+wire [7:0] b3_bram_to_host;
+wire b3_line_read_from_host, b3_chunk_read_from_bram;
+
+// BRAM output select muxes
+wire [1:0] aa_mux_sel;
+wire [num_bits-1:0] aa_mux_out;
+
+wire [1:0] dd_mux_sel;
+wire [num_bits-1:0] dd_mux_out;
+
+// Arithmetic units output mux
+wire [num_bits-1:0] adder_out, shifter_out, subtractor_out, multiplier_out, arithmetic_mux_out;
+wire [1:0] arithmetic_mux_out_sel;
+
+// BRAM input select mux
+wire[num_bits-1:0] BRAM_copy_mux_out;
+wire BRAM_copy_mux_sel;
 
 /************** FSM **************/
 FSM #(num_bits)CHIP_FSM 
@@ -25,21 +68,6 @@ FSM #(num_bits)CHIP_FSM
 
 
 /************** BRAMs **************/
-
-// Wires to all BRAMs
-wire [num_bits-1:0] chunk_input;
-wire [7:0] host_input;
-wire [8:0] offset;
-assign host_input = data_in;
-wire BRAM_in_mux_sel;
-wire b0_rst, b1_rst, b2_rst, b3_rst;
-
-
-// BRAM0
-wire [num_bits-1:0] b0_chunk_out;
-wire [7:0] b0_bram_to_host;
-wire b0_line_read_from_host, b0_chunk_read_from_bram;
-
 bram #(.num_bits(num_bits)) B0
 	(
 		.chunk_input(chunk_input),
@@ -53,10 +81,7 @@ bram #(.num_bits(num_bits)) B0
 		.chunk_out(b0_chunk_out)
 	);
 
-// BRAM1
-wire [num_bits-1:0] b1_chunk_out;
-wire [7:0] b1_bram_to_host;
-wire b1_line_read_from_host, b1_chunk_read_from_bram;
+
 
 bram #(.num_bits(num_bits)) B1
 	(
@@ -71,10 +96,7 @@ bram #(.num_bits(num_bits)) B1
 		.chunk_out(b1_chunk_out)
 	);
 
-// BRAM2
-wire [num_bits-1:0] b2_chunk_out;
-wire [7:0] b2_bram_to_host;
-wire b2_line_read_from_host, b2_chunk_read_from_bram;
+
 
 bram #(.num_bits(num_bits)) B2
 	(
@@ -89,10 +111,7 @@ bram #(.num_bits(num_bits)) B2
 		.chunk_out(b2_chunk_out)
 	);
 
-// BRAM3
-wire [num_bits-1:0] b3_chunk_out;
-wire [7:0] b3_bram_to_host;
-wire b3_line_read_from_host, b3_chunk_read_from_bram;
+
 
 bram #(.num_bits(num_bits)) B3
 	(
@@ -112,9 +131,7 @@ bram #(.num_bits(num_bits)) B3
 
 /************** MUXes **************/
 
-// BRAM output select muxes
-wire [1:0] aa_mux_sel;
-wire [num_bits-1:0] aa_mux_out;
+
 mux4to1#(num_bits) AA_MUX
 (
     .in0(b0_chunk_out),
@@ -125,8 +142,7 @@ mux4to1#(num_bits) AA_MUX
     .out(aa_mux_out)
 );
 
-wire [1:0] dd_mux_sel;
-wire [num_bits-1:0] dd_mux_out;
+
 mux4to1#(num_bits) DD_MUX
 (
     .in0(b0_chunk_out),
@@ -138,9 +154,7 @@ mux4to1#(num_bits) DD_MUX
 );
 
 
-// Arithmetic units output mux
-wire [num_bits-1:0] adder_out, shifter_out, subtractor_out, multiplier_out, arithmetic_mux_out;
-wire [1:0] arithmetic_mux_out_sel;
+
 
 mux4to1#(num_bits) ARITHMETIC_MUX
 (
@@ -163,9 +177,6 @@ mux4to1#(8) HOST_OUT_MUX
     .out(data_out)
 );
 
-// BRAM input select mux
-wire[num_bits-1:0] BRAM_copy_mux_out;
-wire BRAM_copy_mux_sel;
 
 mux2to1 #(num_bits) BRAM_IN_MUX
 (

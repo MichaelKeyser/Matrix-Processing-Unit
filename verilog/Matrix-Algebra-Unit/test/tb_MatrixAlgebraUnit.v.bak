@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
 module tb_MAU;
 
@@ -62,7 +62,7 @@ data_in = 8'h01;
 host_instruction = 8'b00_00_01_00;//LOAD from host to BRAM 0
 #20;
 while(busy_flag == BUSY) begin
-    $display("State: %h", uut.b0_line_read_from_host);
+    $display("State: %h", uut.CHIP_FSM.state);
     data_in = data_in + 8'h01;
     host_instruction = 8'b00_00_00_00;//NOP
     #10;
