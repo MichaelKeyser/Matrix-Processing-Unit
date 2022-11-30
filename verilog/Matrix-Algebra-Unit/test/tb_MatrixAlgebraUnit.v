@@ -31,20 +31,20 @@ always begin
     clk = ~clk;
 end
 
-//always @ (posedge clk) if(uut.b1_line_read_from_host && clk) $display("data_in = %h | Offset = %d", data_in, uut.B0.offset);
+//always @ (posedge clk) if(uut.b0_line_read_from_host && clk) $display("data_in = %h | Offset = %d", data_in, uut.B0.offset);
 
 integer i;
 integer do;
 reg [7:0] test_load_val;
 initial begin
 
-host_instruction = 8'b00000000;
+host_instruction = 8'b00_00_00_00;
 clk = 1'b0; rst = 1'b0;
 #10;
-rst = 1'b1;
+//rst = 1'b1;
 #10;
-rst = 1'b0;
-#20;
+//rst = 1'b0;
+#50;
 
 host_instruction = 8'b00_00_00_00;//NOP
 #20;
@@ -60,6 +60,7 @@ data_in = 8'h01;
 host_instruction = 8'b00_00_01_00;//LOAD from host to BRAM 0
 #20;
 while(busy_flag == BUSY) begin
+    //$display("Enable = %h, %d", uut.b0_line_read_from_host, );
     data_in = data_in + 8'h01;
     host_instruction = 8'b00_00_00_00;//NOP
     #10;
@@ -71,6 +72,7 @@ for(i = 7; i < 512; i = i + 8) begin
     if(uut.b0_chunk_out[i-:8] != test_load_val) $display("LOAD B0 failed at %d | Got = %h | Expected = %h", i, uut.b0_chunk_out[i], test_load_val);
 end
 #20;
+$finish;
 
 
 // BRAM 1
@@ -79,7 +81,7 @@ data_in = 8'h01;
 test_load_val = 8'h00;
 data_in = 8'h01;
 host_instruction = 8'b01_00_01_00;//LOAD from host to BRAM 0
-#20;
+#30;
 while(busy_flag == BUSY) begin
     data_in = data_in + 8'h01;
     host_instruction = 8'b01_00_00_00;//NOP
