@@ -2,14 +2,13 @@ Loading db file '/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_li
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
-Warning: Design has unannotated black box outputs. (PWR-428)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : MAU
 Version: P-2019.03-SP5
-Date   : Tue Nov 29 18:34:34 2022
+Date   : Tue Nov 29 18:56:15 2022
 ****************************************
 
 
@@ -31,12 +30,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   1.8842 mW    (2%)
-  Net Switching Power  =  81.7158 mW   (98%)
+  Cell Internal Power  =   1.8986 mW   (75%)
+  Net Switching Power  = 645.3566 uW   (25%)
                          ---------
-Total Dynamic Power    =  83.6000 mW  (100%)
+Total Dynamic Power    =   2.5440 mW  (100%)
 
-Cell Leakage Power     =   1.4943 uW
+Cell Leakage Power     =   1.5024 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -45,10 +44,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.8881           81.6357        1.3429e+03           82.5079  (  98.75%)
-register           0.9948        2.8486e-03          150.8337            0.9978  (   1.19%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           1.0065        2.7119e-03          154.6352            1.0093  (  39.65%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  1.3132e-03        4.6898e-02            0.5866        4.8211e-02  (   0.06%)
+combinational      0.8922            0.6426        1.3478e+03            1.5359  (  60.35%)
 --------------------------------------------------------------------------------------------------
-Total              1.8842 mW        81.6854 mW     1.4943e+03 nW        83.5539 mW
+Total              1.8987 mW         0.6454 mW     1.5024e+03 nW         2.5453 mW
 1

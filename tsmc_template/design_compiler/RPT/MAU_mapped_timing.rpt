@@ -1,4 +1,3 @@
-Warning: Design 'MAU' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : timing
@@ -7,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : MAU
 Version: P-2019.03-SP5
-Date   : Tue Nov 29 18:34:32 2022
+Date   : Tue Nov 29 18:56:13 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -15,9 +14,9 @@ Date   : Tue Nov 29 18:34:32 2022
 Operating Conditions: PVT_1P8V_25C   Library: sclib_tsmc180_ss
 Wire Load Model Mode: top
 
-  Startpoint: B0/ram_reg[504]
+  Startpoint: B0/ram_reg[384]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: B3/ram_reg[511]
+  Endpoint: B1/ram_reg[391]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -26,62 +25,62 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  B0/ram_reg[504]/CLK (DFFQX1)                            0.00 #     0.00 r
-  B0/ram_reg[504]/Q (DFFQX1)                              0.15       0.15 r
-  B0/chunk_out[504] (bram_num_bits512_0)                  0.00       0.15 r
-  AA_MUX/in0[504] (mux4to1_num_bits512_0)                 0.00       0.15 r
-  AA_MUX/U377/Z (NAND2X1)                                 0.06       0.20 f
-  AA_MUX/U376/Z (AND2X1)                                  0.15       0.35 f
-  AA_MUX/U375/Z (NAND3X1)                                 0.53       0.88 r
-  AA_MUX/out[504] (mux4to1_num_bits512_0)                 0.00       0.88 r
-  ADDER/aa[504] (Adder_num_bits512)                       0.00       0.88 r
-  ADDER/add_10_G64/B[0] (Adder_num_bits512_DW01_add_0)
+  B0/ram_reg[384]/CLK (DFFQX1)                            0.00 #     0.00 r
+  B0/ram_reg[384]/Q (DFFQX1)                              0.15       0.15 r
+  B0/chunk_out[384] (bram_num_bits512_0)                  0.00       0.15 r
+  AA_MUX/in0[384] (mux4to1_num_bits512_0)                 0.00       0.15 r
+  AA_MUX/U1181/Z (NAND2X1)                                0.06       0.20 f
+  AA_MUX/U1180/Z (AND2X1)                                 0.15       0.35 f
+  AA_MUX/U1179/Z (NAND3X1)                                0.53       0.88 r
+  AA_MUX/out[384] (mux4to1_num_bits512_0)                 0.00       0.88 r
+  ADDER/aa[384] (Adder_num_bits512)                       0.00       0.88 r
+  ADDER/add_10_G49/B[0] (Adder_num_bits512_DW01_add_15)
                                                           0.00       0.88 r
-  ADDER/add_10_G64/U43/Z (AND2X1)                         0.17       1.05 r
-  ADDER/add_10_G64/U39/Z (OR2X1)                          0.11       1.16 r
-  ADDER/add_10_G64/U38/Z (NAND2X1)                        0.05       1.21 f
-  ADDER/add_10_G64/U37/Z (NAND2X1)                        0.15       1.36 r
-  ADDER/add_10_G64/U32/Z (OR2X1)                          0.14       1.49 r
-  ADDER/add_10_G64/U31/Z (NAND2X1)                        0.05       1.54 f
-  ADDER/add_10_G64/U30/Z (NAND2X1)                        0.12       1.66 r
-  ADDER/add_10_G64/U4/Z (INVX2)                           0.08       1.74 f
-  ADDER/add_10_G64/U27/Z (NAND2X1)                        0.07       1.81 r
-  ADDER/add_10_G64/U26/Z (NAND2X1)                        0.05       1.86 f
-  ADDER/add_10_G64/U25/Z (NAND2X1)                        0.14       2.01 r
-  ADDER/add_10_G64/U20/Z (OR2X1)                          0.14       2.14 r
-  ADDER/add_10_G64/U19/Z (NAND2X1)                        0.05       2.19 f
-  ADDER/add_10_G64/U18/Z (NAND2X1)                        0.11       2.30 r
-  ADDER/add_10_G64/U2/Z (INVX2)                           0.08       2.38 f
-  ADDER/add_10_G64/U15/Z (NAND2X1)                        0.07       2.45 r
-  ADDER/add_10_G64/U14/Z (NAND2X1)                        0.05       2.50 f
-  ADDER/add_10_G64/U13/Z (NAND2X1)                        0.14       2.64 r
-  ADDER/add_10_G64/U9/Z (OR2X1)                           0.14       2.78 r
-  ADDER/add_10_G64/U8/Z (NAND2X1)                         0.05       2.82 f
-  ADDER/add_10_G64/U7/Z (NAND2X1)                         0.11       2.93 r
-  ADDER/add_10_G64/U5/Z (XOR2X1)                          0.08       3.01 r
-  ADDER/add_10_G64/SUM[7] (Adder_num_bits512_DW01_add_0)
+  ADDER/add_10_G49/U43/Z (AND2X1)                         0.17       1.05 r
+  ADDER/add_10_G49/U39/Z (OR2X1)                          0.11       1.16 r
+  ADDER/add_10_G49/U38/Z (NAND2X1)                        0.05       1.20 f
+  ADDER/add_10_G49/U37/Z (NAND2X1)                        0.15       1.36 r
+  ADDER/add_10_G49/U32/Z (OR2X1)                          0.14       1.49 r
+  ADDER/add_10_G49/U31/Z (NAND2X1)                        0.05       1.54 f
+  ADDER/add_10_G49/U30/Z (NAND2X1)                        0.12       1.66 r
+  ADDER/add_10_G49/U4/Z (INVX2)                           0.08       1.74 f
+  ADDER/add_10_G49/U27/Z (NAND2X1)                        0.07       1.81 r
+  ADDER/add_10_G49/U26/Z (NAND2X1)                        0.05       1.86 f
+  ADDER/add_10_G49/U25/Z (NAND2X1)                        0.14       2.01 r
+  ADDER/add_10_G49/U20/Z (OR2X1)                          0.14       2.14 r
+  ADDER/add_10_G49/U19/Z (NAND2X1)                        0.05       2.19 f
+  ADDER/add_10_G49/U18/Z (NAND2X1)                        0.11       2.30 r
+  ADDER/add_10_G49/U2/Z (INVX2)                           0.08       2.38 f
+  ADDER/add_10_G49/U15/Z (NAND2X1)                        0.07       2.45 r
+  ADDER/add_10_G49/U14/Z (NAND2X1)                        0.05       2.50 f
+  ADDER/add_10_G49/U13/Z (NAND2X1)                        0.14       2.64 r
+  ADDER/add_10_G49/U9/Z (OR2X1)                           0.14       2.78 r
+  ADDER/add_10_G49/U8/Z (NAND2X1)                         0.05       2.82 f
+  ADDER/add_10_G49/U7/Z (NAND2X1)                         0.11       2.93 r
+  ADDER/add_10_G49/U5/Z (XOR2X1)                          0.08       3.01 r
+  ADDER/add_10_G49/SUM[7] (Adder_num_bits512_DW01_add_15)
                                                           0.00       3.01 r
-  ADDER/sum[511] (Adder_num_bits512)                      0.00       3.01 r
-  ARITHMETIC_MUX/in0[511] (mux4to1_num_bits512_1)         0.00       3.01 r
-  ARITHMETIC_MUX/U329/Z (NAND2X1)                         0.04       3.06 f
-  ARITHMETIC_MUX/U328/Z (AND2X1)                          0.15       3.21 f
-  ARITHMETIC_MUX/U327/Z (NAND3X1)                         0.11       3.32 r
-  ARITHMETIC_MUX/out[511] (mux4to1_num_bits512_1)         0.00       3.32 r
-  BRAM_IN_MUX/in0[511] (mux2to1_num_bits512)              0.00       3.32 r
-  BRAM_IN_MUX/U165/Z (NAND2X1)                            0.05       3.37 f
-  BRAM_IN_MUX/U164/Z (NAND2X1)                            0.17       3.53 r
-  BRAM_IN_MUX/out[511] (mux2to1_num_bits512)              0.00       3.53 r
-  B3/chunk_input[511] (bram_num_bits512_1)                0.00       3.53 r
-  B3/U15190/Z (NAND2X1)                                   0.06       3.59 f
-  B3/U15188/Z (NAND2X1)                                   0.10       3.69 r
-  B3/U15187/Z (NAND2X1)                                   0.05       3.75 f
-  B3/U15186/Z (NAND2X1)                                   0.11       3.86 r
-  B3/ram_reg[511]/D (DFFQQBX1)                            0.00       3.86 r
+  ADDER/sum[391] (Adder_num_bits512)                      0.00       3.01 r
+  ARITHMETIC_MUX/in0[391] (mux4to1_num_bits512_1)         0.00       3.01 r
+  ARITHMETIC_MUX/U1133/Z (NAND2X1)                        0.04       3.06 f
+  ARITHMETIC_MUX/U1132/Z (AND2X1)                         0.15       3.21 f
+  ARITHMETIC_MUX/U1131/Z (NAND3X1)                        0.11       3.32 r
+  ARITHMETIC_MUX/out[391] (mux4to1_num_bits512_1)         0.00       3.32 r
+  BRAM_IN_MUX/in0[391] (mux2to1_num_bits512)              0.00       3.32 r
+  BRAM_IN_MUX/U567/Z (NAND2X1)                            0.05       3.37 f
+  BRAM_IN_MUX/U566/Z (NAND2X1)                            0.17       3.54 r
+  BRAM_IN_MUX/out[391] (mux2to1_num_bits512)              0.00       3.54 r
+  B1/chunk_input[391] (bram_num_bits512_3)                0.00       3.54 r
+  B1/U12075/Z (NAND2X1)                                   0.06       3.60 f
+  B1/U12057/Z (NAND2X1)                                   0.10       3.70 r
+  B1/U12056/Z (NAND2X1)                                   0.05       3.75 f
+  B1/U12055/Z (NAND2X1)                                   0.11       3.86 r
+  B1/ram_reg[391]/D (DFFQX1)                              0.00       3.86 r
   data arrival time                                                  3.86
 
   clock clk (rise edge)                                  20.00      20.00
   clock network delay (ideal)                             0.00      20.00
-  B3/ram_reg[511]/CLK (DFFQQBX1)                          0.00      20.00 r
+  B1/ram_reg[391]/CLK (DFFQX1)                            0.00      20.00 r
   library setup time                                     -0.12      19.88
   data required time                                                19.88
   --------------------------------------------------------------------------
