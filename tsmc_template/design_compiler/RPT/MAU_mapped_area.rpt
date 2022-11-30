@@ -1,0 +1,33 @@
+Warning: Design 'MAU' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : MAU
+Version: P-2019.03-SP5
+Date   : Tue Nov 29 18:34:32 2022
+****************************************
+
+Library(s) Used:
+
+    sclib_tsmc180_ss (File: /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.db)
+
+Number of ports:                        25024
+Number of nets:                        119916
+Number of cells:                        94798
+Number of combinational cells:          92544
+Number of sequential cells:              2049
+Number of macros/black boxes:               0
+Number of buf/inv:                       6358
+Number of references:                      14
+
+Combinational area:            1266756.908329
+Buf/Inv area:                    52588.290745
+Noncombinational area:          109260.749756
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1376017.658085
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
