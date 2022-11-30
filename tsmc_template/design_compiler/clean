@@ -1,0 +1,29 @@
+#!/bin/tcsh
+
+echo "Clearing folders"
+rm -r DDC/*
+rm -r DESIGN_LIBS/*
+rm -r HDL/GATE/*
+rm -r RPT/*
+rm -r SDC/*
+rm -r SDF/*
+
+echo "Removing synthesis files"
+rm *.mr
+rm *.pvl
+rm *.syn
+rm *.svf
+
+ 
+ 
+  
+
+
+
+
+
+
+
+
+
+

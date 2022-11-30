@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module tb_MAU;
 
 parameter matrix_dim = 8;
@@ -8,7 +10,7 @@ parameter B2 = 2'b10;//BRAM 2
 parameter B3 = 2'b11;//BRAM 3
 
 reg [7:0] host_instruction, data_in;
-reg clk, rst;
+reg clk, rst;  
 wire [7:0] data_out;
 wire busy_flag, busy;
 
@@ -60,7 +62,6 @@ data_in = 8'h01;
 host_instruction = 8'b00_00_01_00;//LOAD from host to BRAM 0
 #20;
 while(busy_flag == BUSY) begin
-    //$display("Enable = %h, %d", uut.b0_line_read_from_host, );
     data_in = data_in + 8'h01;
     host_instruction = 8'b00_00_00_00;//NOP
     #10;
@@ -742,7 +743,7 @@ end
 host_instruction = 8'b10_11_11_11;//BRAM 2 = BRAM 2 * BRAM 3
 #20;
 for(i = 7; i < 512; i = i + 8) begin
-    if(uut.b2_chunk_out[i-:8] != 8'd20) $display("B2 = B0 * B1  failed at %d | Got = %h | Expected = %h", i, uut.b2_chunk_out[i-:8], 0);
+    if(uut.b2_chunk_out[i-:8] != 8'd20) $display("B2 = B0 * B1  failed at %d | Got = %d | Expected = %d", i, uut.b2_chunk_out[i-:8], 8'd20);
 end
 while(busy) begin
     host_instruction = 8'b00000000;
@@ -777,7 +778,8 @@ end
 host_instruction = 8'b11_00_01_11;
 #20;
 if(uut.b3_chunk_out != 0) begin
-    $display("CLEAR BRAM 3: Failed");
+    $display("%b", uut.b3_chunk_out);
+    $display("CLEAR BRAM 3: Failed!");
 end
 while(busy_flag) begin
     host_instruction = 8'b00000000;
