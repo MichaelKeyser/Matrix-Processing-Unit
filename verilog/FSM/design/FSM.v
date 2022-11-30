@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 
 module FSM
 #(parameter num_bits = 512)
@@ -82,7 +81,6 @@ always @(posedge clk, posedge reset)begin
 	end
 
 	else begin
-
 	busy = 1;//It's busy in all states but IDLE
 
 	//Default BRAM controls

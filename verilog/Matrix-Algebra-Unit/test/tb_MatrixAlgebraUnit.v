@@ -39,14 +39,15 @@ integer i;
 integer do;
 reg [7:0] test_load_val;
 initial begin
-
+$display("begin");
 host_instruction = 8'b00_00_00_00;
 clk = 1'b0; rst = 1'b0;
 #10;
-//rst = 1'b1;
+rst = 1'b1;
 #10;
-//rst = 1'b0;
-#50;
+rst = 1'b0;
+#20;
+
 
 host_instruction = 8'b00_00_00_00;//NOP
 #20;
@@ -73,7 +74,7 @@ for(i = 7; i < 512; i = i + 8) begin
     if(uut.b0_chunk_out[i-:8] != test_load_val) $display("LOAD B0 failed at %d | Got = %h | Expected = %h", i, uut.b0_chunk_out[i], test_load_val);
 end
 #20;
-$finish;
+
 
 
 // BRAM 1

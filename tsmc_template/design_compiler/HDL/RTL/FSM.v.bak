@@ -1,3 +1,4 @@
+
 module FSM
 #(parameter num_bits = 512)
 (
@@ -46,9 +47,41 @@ reg [5:0] counter;//Register for the counter
 assign aa_MUX = host_instruction[5:4];//Control the AA MUX with the AA bits from the instruction
 assign dd_MUX = host_instruction[7:6];//Control the DD MUX with the DD bits from the instruction
 
-always @(posedge clk, posedge reset)begin
-	if(reset == 1) state = RESET;
 
+/*always @(posedge reset)begin
+	$display("Reset");
+end
+*/
+
+
+always @(posedge clk, posedge reset)begin
+	if(reset == 1)begin
+		 state = RESET;
+
+		busy = 1;//It's busy in all states but IDLE
+
+		//Default BRAM controls
+		b0_en1 = 0; b0_en = 0; b0_rst = 0;
+		b1_en1 = 0; b1_en = 0; b1_rst = 0;
+		b2_en1 = 0; b2_en = 0; b2_rst = 0;
+		b3_en1 = 0; b3_en = 0; b3_rst = 0;
+
+		bram_in_MUX = 0;//Only COPY sets to 1
+
+		out_MUX = out_MUX;//Keep the same output MUX
+		counter = counter;//Keep the counter the same
+		offset = offset;//Keep the offset the same
+
+		b0_rst = 1;
+		b1_rst = 1;
+		b2_rst = 1;
+		b3_rst = 1;	
+
+		state = IDLE;
+		$display("in reset");
+	end
+
+	else begin
 	busy = 1;//It's busy in all states but IDLE
 
 	//Default BRAM controls
@@ -205,8 +238,9 @@ always @(posedge clk, posedge reset)begin
 			state = IDLE;//Return to IDLE
 		end
 		
-		default: state = IDLE;//Reset if something goes wrong
+		default: state = RESET;//Reset if something goes wrong
 	endcase
+	end
 end
 
 endmodule
