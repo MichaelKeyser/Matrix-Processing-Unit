@@ -1,0 +1,64 @@
+/home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Multiplier.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Multiplier.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Multiplier
+
+Top level modules:
+	Multiplier
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/MUX/design/mux2to1.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/MUX/design/mux2to1.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module mux2to1
+
+Top level modules:
+	mux2to1
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Adder.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Adder.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Adder
+
+Top level modules:
+	Adder
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/Local-Memory/design/bram.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/Local-Memory/design/bram.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module bram
+
+Top level modules:
+	bram
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/FSM/test/tb_FSM.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/FSM/test/tb_FSM.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_FSM
+
+Top level modules:
+	tb_FSM
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Subtractor.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Subtractor.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Subtractor
+
+Top level modules:
+	Subtractor
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Shifter.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/Arithmetic-Units/design/Shifter.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Shifter
+
+Top level modules:
+	Shifter
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/MUX/design/mux4to1.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/MUX/design/mux4to1.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module mux4to1
+
+Top level modules:
+	mux4to1
+
+} {} {}} /home/u1081888/Matrix-Processing-Unit/verilog/FSM/design/FSM.v {1 {vlog -work work -vopt -stats=none /home/u1081888/Matrix-Processing-Unit/verilog/FSM/design/FSM.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}}

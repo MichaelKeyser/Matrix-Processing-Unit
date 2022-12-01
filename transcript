@@ -1,0 +1,598 @@
+# //  Questa Sim-64
+# //  Version 2019.4 linux_x86_64 Oct 15 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project mau
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# vsim work.tb_MAU 
+# Start time: 14:41:39 on Dec 01,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(329)
+#    Time: 6920 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 329
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:48:56 on Dec 01,2022, Elapsed time: 0:07:17
+# Errors: 6, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:48:56 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(373)
+#    Time: 7060 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 373
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+vsim work.tb_MAU
+# End time: 14:50:16 on Dec 01,2022, Elapsed time: 0:01:20
+# Errors: 15, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:50:16 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(445)
+#    Time: 9900 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 445
+# Load canceled
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:51:15 on Dec 01,2022, Elapsed time: 0:00:59
+# Errors: 9, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:51:15 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 0 = BRAM 0 << BRAM 1: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(494)
+#    Time: 10020 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 494
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:52:39 on Dec 01,2022, Elapsed time: 0:01:24
+# Errors: 11, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:52:39 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 1 = BRAM 1 << BRAM 2: Failed
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# BRAM 3 = BRAM 3 << BRAM 0: Failed | Result =   0 | 00 | 01
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(494)
+#    Time: 10100 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 494
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+vsim work.tb_MAU
+# End time: 14:53:18 on Dec 01,2022, Elapsed time: 0:00:39
+# Errors: 20, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:53:18 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# BRAM 2 = BRAM 2 << BRAM 3: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(494)
+#    Time: 10110 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 494
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:54:04 on Dec 01,2022, Elapsed time: 0:00:46
+# Errors: 19, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:54:04 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(494)
+#    Time: 10140 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 494
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+vsim work.tb_MAU
+# End time: 14:55:09 on Dec 01,2022, Elapsed time: 0:01:05
+# Errors: 29, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:55:09 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# CLEAR BRAM 1: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(542)
+#    Time: 10300 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 542
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:56:38 on Dec 01,2022, Elapsed time: 0:01:29
+# Errors: 35, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:56:38 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# CLEAR BRAM 1: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(615)
+#    Time: 13160 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 615
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:57:51 on Dec 01,2022, Elapsed time: 0:01:13
+# Errors: 41, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:57:51 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# CLEAR BRAM 1: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(671)
+#    Time: 13360 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 671
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+vsim work.tb_MAU
+# End time: 14:58:32 on Dec 01,2022, Elapsed time: 0:00:41
+# Errors: 35, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:58:32 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# CLEAR BRAM 1: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(736)
+#    Time: 16220 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 736
+# Compile of Adder.v was successful.
+# Compile of Multiplier.v was successful.
+# Compile of Shifter.v was successful.
+# Compile of Subtractor.v was successful.
+# Compile of FSM.v was successful.
+# Compile of bram.v was successful.
+# Compile of MAU.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of tb_FSM.v was successful.
+# Compile of tb_MatrixAlgebraUnit.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.tb_MAU
+# End time: 14:59:30 on Dec 01,2022, Elapsed time: 0:00:58
+# Errors: 43, Warnings: 0
+# vsim work.tb_MAU 
+# Start time: 14:59:30 on Dec 01,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_MAU(fast)
+run -all
+# begin
+# CLEAR BRAM 1: Failed
+# CLEAR BRAM 2: Failed
+# ** Note: $finish    : /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v(792)
+#    Time: 16420 ns  Iteration: 0  Instance: /tb_MAU
+# 1
+# Break at /home/u1012574/Matrix-Processing-Unit/verilog/Matrix-Algebra-Unit/test/tb_MatrixAlgebraUnit.v line 792
+# End time: 15:11:53 on Dec 01,2022, Elapsed time: 0:12:23
+# Errors: 39, Warnings: 0

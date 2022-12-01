@@ -1,0 +1,23 @@
+#!/bin/tcsh
+
+set VERILOG_DIR = `pwd`/../../verilog
+
+# Directories with verilog file
+set ARITHMETIC_DIR = $VERILOG_DIR/Arithmetic-Units/design
+set LOCALMEM_DIR = $VERILOG_DIR/Local-Memory/design
+set FSM_DIR = $VERILOG_DIR/FSM/design
+set MAU_DIR = $VERILOG_DIR/Matrix-Algebra-Unit/design
+set MUX_DIR = $VERILOG_DIR/MUX/design
+
+set RTL_DIR = `pwd`/HDL/RTL
+
+# Clear existing files in the directory
+rm -rf "$RTL_DIR"
+mkdir "$RTL_DIR"
+
+# Copy verilog files to RTL directory
+cp -r "$ARITHMETIC_DIR/." "$RTL_DIR"
+cp -r "$LOCALMEM_DIR/." "$RTL_DIR"
+cp -r "$FSM_DIR/." "$RTL_DIR"
+cp -r "$MAU_DIR/." "$RTL_DIR"
+cp -r "$MUX_DIR/." "$RTL_DIR"

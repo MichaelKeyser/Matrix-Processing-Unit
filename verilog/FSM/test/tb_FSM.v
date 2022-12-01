@@ -50,7 +50,7 @@ initial begin
     host_instruction = 8'b00000000;
     clk = 1'b0; reset = 1'b0;
     #10;
-    reset = 1'b1;
+    //reset = 1'b1;
     #10;
     reset = 1'b0;
     #20;
@@ -88,6 +88,7 @@ initial begin
     #10;
     for(i = 0; i < 64; i = i + 1)begin
         #10;
+        //$display("%d", offset);
         if(b_en != 4'b0000 || b_en1 != 4'b0010 || b_rst != 4'b0000 || !busy) begin
             $display("LOAD from host to BRAM 1: Failed on i = %d", i);
             $display("state = %h, b_en = %b, b_en1 = %b, b_rst = %b, busy = %b, rst_fsm = %b", uut.state, b_en, b_en1, b_rst, busy, uut.reset);
