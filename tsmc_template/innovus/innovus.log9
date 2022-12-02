@@ -200,3 +200,8 @@ Read 1 cells in library 'USERLIB'
 *** End library_loading (cpu=0.00min, real=0.00min, mem=19.5M, fe_cpu=0.21min, fe_real=0.67min, fe_mem=796.1M) ***
 **ERROR: (IMPSYT-16038):	The specified file '../design_compiler/HDL/GATE/MAU_mapped_pads.v' could not be found. Check your file system, correct the file name.
 **ERROR: (IMPIMEX-7008):	No netlist files are found.
+
+*** Memory Usage v#1 (Current mem = 797.625M, initial mem = 290.191M) ***
+*** Message Summary: 86 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:02:15, real=0:29:17, mem=797.6M) ---

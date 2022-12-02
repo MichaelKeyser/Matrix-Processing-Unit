@@ -1,0 +1,451 @@
+xmvlog: *W,DLNOHV: Unable to find an 'hdl.var' file to load in.
+TOOL:	xmvlog(64)	20.09-s022: Started on Dec 02, 2022 at 14:37:52 MST
+xmvlog
+    -work __nclib
+    -view module
+    -logfile xmvlog.log
+    -cdslib /tmp/ihdl_cdslibb7102_317102
+    -messages
+    -nostdout
+    -nocopyright
+    -ESCAPEDNAME
+    /home/u1081888/Matrix-Processing-Unit/tsmc_template/HDL/PLACED/project_placed_virtuoso.v
+
+file: /home/u1081888/Matrix-Processing-Unit/tsmc_template/HDL/PLACED/project_placed_virtuoso.v
+	module __nclib.pad_out_buffered:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_1:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_2:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_3:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_4:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_5:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_6:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_7:module
+		errors: 0, warnings: 0
+	module __nclib.pad_out_buffered_SPC_8:module
+		errors: 0, warnings: 0
+	module __nclib.FSM_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.bram_num_bits512_0:module
+		errors: 0, warnings: 0
+	module __nclib.bram_num_bits512_3:module
+		errors: 0, warnings: 0
+	module __nclib.bram_num_bits512_2:module
+		errors: 0, warnings: 0
+	module __nclib.bram_num_bits512_1:module
+		errors: 0, warnings: 0
+	module __nclib.mux4to1_num_bits512_0:module
+		errors: 0, warnings: 0
+	module __nclib.mux4to1_num_bits512_2:module
+		errors: 0, warnings: 0
+	module __nclib.mux4to1_num_bits512_1:module
+		errors: 0, warnings: 0
+	module __nclib.mux4to1_num_bits8:module
+		errors: 0, warnings: 0
+	module __nclib.mux2to1_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_0:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_1:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_2:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_3:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_4:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_5:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_6:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_7:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_8:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_9:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_10:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_11:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_12:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_13:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_14:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_15:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_16:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_17:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_18:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_19:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_20:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_21:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_22:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_23:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_24:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_25:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_26:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_27:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_28:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_29:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_30:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_31:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_32:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_33:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_34:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_35:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_36:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_37:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_38:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_39:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_40:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_41:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_42:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_43:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_44:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_45:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_46:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_47:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_48:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_49:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_50:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_51:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_52:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_53:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_54:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_55:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_56:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_57:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_58:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_59:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_60:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_61:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_62:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512_DW01_add_63:module
+		errors: 0, warnings: 0
+	module __nclib.Adder_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.Shifter_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_0:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_1:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_2:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_3:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_4:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_5:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_6:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_7:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_8:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_9:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_10:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_11:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_12:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_13:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_14:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_15:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_16:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_17:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_18:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_19:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_20:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_21:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_22:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_23:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_24:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_25:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_26:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_27:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_28:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_29:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_30:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_31:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_32:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_33:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_34:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_35:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_36:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_37:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_38:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_39:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_40:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_41:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_42:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_43:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_44:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_45:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_46:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_47:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_48:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_49:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_50:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_51:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_52:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_53:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_54:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_55:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_56:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_57:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_58:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_59:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_60:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_61:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_62:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512_DW01_sub_63:module
+		errors: 0, warnings: 0
+	module __nclib.Subtractor_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_59:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_63:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_17:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_28:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_39:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_50:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_55:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_56:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_57:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_58:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_60:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_61:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_62:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_0:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_1:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_2:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_3:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_4:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_5:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_6:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_7:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_8:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_9:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_10:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_11:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_12:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_13:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_14:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_15:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_16:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_18:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_19:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_20:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_21:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_22:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_23:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_24:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_25:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_26:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_27:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_29:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_30:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_31:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_32:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_33:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_34:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_35:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_36:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_37:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_38:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_40:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_41:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_42:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_43:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_44:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_45:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_46:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_47:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_48:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_49:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_51:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_52:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_53:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512_DW_mult_uns_54:module
+		errors: 0, warnings: 0
+	module __nclib.Multiplier_num_bits512:module
+		errors: 0, warnings: 0
+	module __nclib.MAU:module
+		errors: 0, warnings: 0
+	module __nclib.MAU_mapped_pads:module
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+TOOL:	xmvlog(64)	20.09-s022: Exiting on Dec 02, 2022 at 14:37:53 MST  (total: 00:00:01)

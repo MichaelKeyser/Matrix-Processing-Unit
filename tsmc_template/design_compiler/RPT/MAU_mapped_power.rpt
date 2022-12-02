@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : MAU
 Version: P-2019.03-SP5
-Date   : Thu Dec  1 20:34:05 2022
+Date   : Fri Dec  2 12:58:21 2022
 ****************************************
 
 
@@ -30,10 +30,10 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   5.4251 mW   (75%)
-  Net Switching Power  =   1.8439 mW   (25%)
+  Cell Internal Power  =   3.7974 mW   (75%)
+  Net Switching Power  =   1.2907 mW   (25%)
                          ---------
-Total Dynamic Power    =   7.2690 mW  (100%)
+Total Dynamic Power    =   5.0881 mW  (100%)
 
 Cell Leakage Power     =   1.5024 uW
 
@@ -45,9 +45,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           2.8756        7.7193e-03          154.6352            2.8835  (  39.66%)
+register           2.0129        5.4238e-03          154.6352            2.0185  (  39.66%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      2.5493            1.8360        1.3478e+03            4.3865  (  60.34%)
+combinational      1.7845            1.2853        1.3478e+03            3.0707  (  60.34%)
 --------------------------------------------------------------------------------------------------
-Total              5.4249 mW         1.8437 mW     1.5024e+03 nW         7.2700 mW
+Total              3.7975 mW         1.2907 mW     1.5024e+03 nW         5.0892 mW
 1

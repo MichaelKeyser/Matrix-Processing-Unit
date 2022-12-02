@@ -3,7 +3,7 @@
 Report : area
 Design : MAU
 Version: P-2019.03-SP5
-Date   : Thu Dec  1 20:34:03 2022
+Date   : Fri Dec  2 12:58:19 2022
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     sclib_tsmc180_ss (File: /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.db)
 
 Number of ports:                        25063
-Number of nets:                        120254
-Number of cells:                        95126
-Number of combinational cells:          92837
+Number of nets:                        120255
+Number of cells:                        95127
+Number of combinational cells:          92838
 Number of sequential cells:              2083
 Number of macros/black boxes:               0
-Number of buf/inv:                       6496
+Number of buf/inv:                       6497
 Number of references:                      14
 
-Combinational area:            1270149.093962
-Buf/Inv area:                    53734.106770
+Combinational area:            1270157.365162
+Buf/Inv area:                    53742.377970
 Noncombinational area:          111888.521687
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:               1382037.615648
+Total cell area:               1382045.886848
 Total area:                 undefined
 1

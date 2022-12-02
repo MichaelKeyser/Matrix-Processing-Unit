@@ -1,0 +1,60 @@
+@(#)$CDS: ihdl version 6.1.8-64b 06/22/2022 16:16 (sjfhw316) $  Fri Dec  2 14:37:52 2022
+
+INFO (VERILOGIN-589): Using xmvlog binary for compilation.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INVX4. Therefore using library
+SC_LIB, cell INVX4, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INVX2. Therefore using library
+SC_LIB, cell INVX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module pad_out. Therefore using library
+PADS_LIB, cell pad_out, and view symbol as the symbol.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_1.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_1.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_2.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_2.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_3.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_3.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_4.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_4.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_5.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_5.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_6.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_6.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_7.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_7.
+INFO (VERILOGIN-357): Checked in symbol pad_out_buffered_SPC_8.
+INFO (VERILOGIN-412): Checked-in connect by name schematic pad_out_buffered_SPC_8.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUFX1. Therefore using library
+SC_LIB, cell BUFX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INVX8. Therefore using library
+SC_LIB, cell INVX8, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INVX1. Therefore using library
+SC_LIB, cell INVX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFFQX1. Therefore using library
+SC_LIB, cell DFFQX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NAND3X1. Therefore using library
+SC_LIB, cell NAND3X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NAND2X1. Therefore using library
+SC_LIB, cell NAND2X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NOR2X1. Therefore using library
+SC_LIB, cell NOR2X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AND2X1. Therefore using library
+SC_LIB, cell AND2X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR2X1. Therefore using library
+SC_LIB, cell OR2X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFFQSRX1. Therefore using library
+SC_LIB, cell DFFQSRX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module TIE1. Therefore using library
+SC_LIB, cell TIE1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module XOR2X1. Therefore using library
+SC_LIB, cell XOR2X1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module MUX2X1. Therefore using library
+SC_LIB, cell MUX2X1, and view symbol as the symbol.
+INFO (VERILOGIN-357): Checked in symbol FSM_num_bits512.
+INFO (VERILOGIN-412): Checked-in connect by name schematic FSM_num_bits512.
+INFO (VERILOGIN-126): Unable to find the Verilog definitionINFO (VERILOGIN-372): Checked-in schematic bram_num_bits512_0.
+INFO (VERILOGIN-357): Checked in symbol bram_num_bits512_3.
+ERROR (VERILOGIN-368): Failed to open the schematic view "bram_num_bits512_3" in the "w" mode. Exiting.
+INFO (VERILOGIN-206): End of Logfile.
+NFO (VERILOGIN-206): End of Logfile.

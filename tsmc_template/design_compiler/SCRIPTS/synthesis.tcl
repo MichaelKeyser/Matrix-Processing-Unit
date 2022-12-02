@@ -1,6 +1,6 @@
 # The period has to be changed to see if the design can meet the timing constraint
 #Same for the clk_name when using a different design.
-set clk_period 7
+set clk_period 10
 set clk_name clk
 
 #  Define the name of the top module to be synthesized.

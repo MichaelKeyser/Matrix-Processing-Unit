@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : MAU
 Version: P-2019.03-SP5
-Date   : Thu Dec  1 20:34:03 2022
+Date   : Fri Dec  2 12:58:19 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -38,7 +38,7 @@ Wire Load Model Mode: top
                                                           0.00       0.88 r
   ADDER/add_10_G54/U43/Z (AND2X1)                         0.17       1.05 r
   ADDER/add_10_G54/U39/Z (OR2X1)                          0.11       1.16 r
-  ADDER/add_10_G54/U38/Z (NAND2X1)                        0.05       1.21 f
+  ADDER/add_10_G54/U38/Z (NAND2X1)                        0.05       1.20 f
   ADDER/add_10_G54/U37/Z (NAND2X1)                        0.15       1.36 r
   ADDER/add_10_G54/U32/Z (OR2X1)                          0.14       1.49 r
   ADDER/add_10_G54/U31/Z (NAND2X1)                        0.05       1.54 f
@@ -78,16 +78,16 @@ Wire Load Model Mode: top
   B3/ram_reg[431]/D (DFFQX1)                              0.00       3.86 r
   data arrival time                                                  3.86
 
-  clock clk (rise edge)                                   7.00       7.00
-  clock network delay (ideal)                             0.00       7.00
-  B3/ram_reg[431]/CLK (DFFQX1)                            0.00       7.00 r
-  library setup time                                     -0.12       6.88
-  data required time                                                 6.88
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  B3/ram_reg[431]/CLK (DFFQX1)                            0.00      10.00 r
+  library setup time                                     -0.12       9.88
+  data required time                                                 9.88
   --------------------------------------------------------------------------
-  data required time                                                 6.88
+  data required time                                                 9.88
   data arrival time                                                 -3.86
   --------------------------------------------------------------------------
-  slack (MET)                                                        3.02
+  slack (MET)                                                        6.02
 
 
 1

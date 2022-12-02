@@ -315,6 +315,7 @@ proc place_core_cells {} {
 
    set name "placed"
    save_design $name
+   
 }
 
 

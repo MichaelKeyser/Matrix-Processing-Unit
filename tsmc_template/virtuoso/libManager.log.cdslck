@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      u1081888
+HostName                       lab1-4.eng.utah.edu
+ProcessIdentifier              313088
+ProcessCreationTime_UTC        1670015141
+ProcessCreationTime_Readable   Fri Dec  2 14:05:41 2022 MST
+AppIdentifier                  /uusoc/facility/cad_tools/Cadence/IC618/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/u1081888/Matrix-Processing-Unit/tsmc_template/virtuoso/libManager.log
+TimeEditLocked                 Fri Dec  2 14:05:41 2022 MST

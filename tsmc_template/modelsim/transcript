@@ -12,12 +12,10 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project test-pads
-# Compile of MAU_mapped.v was successful.
-# 1 compiles, 1 failed with no errors.
-# Compile of MAU_mapped.v was successful.
-# Compile of MAU_mapped_pads.v failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of MAU_mapped.v was successful.
-# Compile of MAU_mapped_pads.v was successful.
-# 2 compiles, 0 failed with no errors.
+# Project file /home/u1081888/Matrix-Processing-Unit/tsmc_template/modelsim/test-pads.mpf was not found.
+# Unable to open project.
+# Loading project post-placed-test
+# Compile of project_placed_modelsim.v was successful.
+# Compile of padlib_tsmc180.v was successful.
+# Compile of sclib_tsmc180.v was successful.
+# 3 compiles, 0 failed with no errors.

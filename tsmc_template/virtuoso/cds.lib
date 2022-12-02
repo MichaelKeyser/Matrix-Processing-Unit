@@ -7,3 +7,4 @@ DEFINE SC_LIB /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/o
 DEFINE PADS_LIB /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/oa/PADS_LIB
 DEFINE rf2hsm1wm1 /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/oa/rf2hsm1wm1
 
+#Removed by ddDeleteObj: DEFINE mau /home/u1081888/Matrix-Processing-Unit/tsmc_template/virtuoso/mau
