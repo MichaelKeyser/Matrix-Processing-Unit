@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version P-2019.03-SP5 for linux64 -- Oct 17, 2019
-#@ # Date:   Thu Dec  1 16:01:45 2022
+#@ # Date:   Thu Dec  1 20:31:47 2022
 #@ # Run by: u1081888@lab1-15.eng.utah.edu
 #@ 
 
@@ -6682,7 +6682,7 @@ source SCRIPTS/synthesis.tcl
 
 #@ # The period has to be changed to see if the design can meet the timing constraint
 #@ #Same for the clk_name when using a different design.
-#@ set clk_period 4
+#@ set clk_period 7
 #@ set clk_name clk
 #@ 
 #@ #  Define the name of the top module to be synthesized.

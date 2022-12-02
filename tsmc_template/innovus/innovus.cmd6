@@ -1,0 +1,185 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Dec  1 19:16:22 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v20.15-s105_1 (64bit) 07/27/2021 14:15 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.15-s105_1 NR210726-1341/20_15-UB (database version 18.20.554) {superthreading v2.14}
+#@(#)CDS: AAE 20.15-s020 (64bit) 07/27/2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.15-s024_1 () Jul 23 2021 04:46:45 ( )
+#@(#)CDS: SYNTECH 20.15-s012_1 () Jul 12 2021 23:29:38 ( )
+#@(#)CDS: CPE v20.15-s071
+#@(#)CDS: IQuantus/TQuantus 20.1.1-s460 (64bit) Fri Mar 5 18:46:16 PST 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+setMultiCpuUsage -localCpu max
+set init_lef_file {/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/sclib_tsmc180.lef /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/padlib_tsmc180.lef /research/ece/lnis-teaching/Designkits/tsmc180nm/arm_ip/rf2hs8x8/rf2hsm1wm1.vclef /research/ece/lnis-teaching/Designkits/tsmc180nm/arm_ip/rf2hs8x8/rf2hsm1wm1_ant.lef}
+set init_mmmc_file CONF/project.view
+save_global CONF/project_final.globals
+set init_gnd_net VSS
+set init_pwr_net VDD
+init_design
+floorPlan -site core7T -r 0.7 20 20 20 20
+floorPlan -site core7T -r 1 0.7 20 20 20 20
+setPreference MinFPModuleSize 1
+setDrawView fplan
+zoomBox 199.04250 227.01250 1230.51650 1463.90100
+zoomBox -89.81750 -288.90550 1886.16300 2080.58450
+zoomBox 199.04250 227.01250 1230.51650 1463.90100
+zoomBox 286.58200 383.36200 1031.82200 1277.01400
+zoomBox 77.88000 10.61050 1505.52650 1722.56800
+zoomBox -0.60400 -127.72200 1678.98000 1886.34550
+zoomBox -503.78200 -994.06200 2713.77400 2864.25900
+pan -1006.91650 -494.85650
+zoomBox -1454.18350 -638.35300 521.79850 1731.13900
+zoomBox -1411.19100 -332.02700 -379.71550 904.86350
+zoomBox -1388.74900 -172.12250 -850.31200 473.54250
+zoomBox -1375.11550 -74.97800 -1136.20750 211.50750
+zoomBox -1366.60100 -39.24200 -1241.88900 110.30600
+pan -66.52500 1325.05300
+zoomBox -1528.52350 -86.53100 -1247.45300 250.51350
+zoomBox -1619.53450 -142.48250 -1161.85800 406.33850
+zoomBox -1845.70750 -269.44550 -968.94250 781.92400
+zoomBox -2045.93750 -359.50150 -832.42200 1095.68150
+pan 764.70500 1819.35300
+zoomBox -1532.63100 -536.71650 1202.32850 2742.90050
+pan 295.67100 945.33900
+zoomBox -1607.53200 -1675.66500 2177.87900 2863.59750
+pan -166.92400 357.25450
+pan 263.84800 524.17850
+clearGlobalNets
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer METAL6 -stacked_via_bottom_layer METAL1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top METAL5 bottom METAL5 left METAL4 right METAL4} -width {top 4 bottom 4 left 4 right 4} -spacing {top 4 bottom 4 left 4 right 4} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METAL6 -stacked_via_bottom_layer METAL1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {VDD VSS} -layer METAL4 -direction vertical -width 2 -spacing 2 -number_of_sets 2 -start_from left -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METAL6 -padcore_ring_bottom_layer_limit METAL1 -block_ring_top_layer_limit METAL6 -block_ring_bottom_layer_limit METAL1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin corePin } -layerChangeRange { METAL1(1) METAL6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { METAL1(1) METAL6(6) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { METAL1(1) METAL6(6) }
+zoomBox -4864.19000 -3801.20450 3667.17300 6429.14950
+zoomBox -1549.45050 -1249.32850 2235.96150 3289.93500
+zoomBox -111.63200 -135.02050 1567.97600 1879.07550
+zoomBox 526.33550 359.40400 1271.58700 1253.06950
+zoomBox -314.01300 -291.86700 1661.99850 2077.66050
+zoomBox -1161.75850 -948.87000 2055.84700 2909.51050
+zoomBox -1539.76200 -1236.41150 2245.65650 3302.86000
+saveDesign DBS/mau_fplan_power.enc
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {BUFX1 INVX8 INVX4 INVX32 INVX2 INVX16 INVX1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -fp false
+place_design
+zoomBox -1645.23850 -1706.05100 3594.09550 4576.67800
+zoomBox -1712.31400 -2005.91750 4451.60850 5385.52850
+zoomBox -1539.76250 -1234.51150 2245.65650 3304.76050
+zoomBox -698.11900 -256.45400 1277.89400 2113.07500
+zoomBox -1322.73600 -942.90000 1412.23050 2336.72550
+setDrawView place
+pan 809.20800 480.98700
+zoomBox -132.31100 320.72450 1295.35900 2032.71000
+zoomBox 66.68700 927.42550 811.94000 1821.09300
+zoomBox 191.12000 1301.90400 521.79250 1698.42900
+zoomBox 246.33100 1468.06150 393.05300 1644.00250
+pan -85.15300 1236.75750
+zoomBox 210.14550 1549.09200 275.24700 1627.15850
+zoomBox 230.75150 1576.58800 259.63750 1611.22650
+zoomBox 240.75700 1590.38250 251.65200 1603.44700
+zoomBox 243.66350 1595.52500 248.49800 1601.32250
+zoomBox 243.19800 1594.12200 249.89000 1602.14650
+zoomBox 242.16350 1590.95150 253.06100 1604.01900
+zoomBox 236.51150 1573.53800 270.50650 1614.30300
+zoomBox 222.77400 1531.21100 312.91250 1639.30000
+zoomBox 202.57950 1468.98300 375.25750 1676.04950
+zoomBox 132.80650 1253.98750 590.65850 1803.01900
+zoomBox -52.19300 683.93250 1161.78850 2139.67400
+zoomBox -542.71150 -827.54950 2676.12200 3032.30350
+zoomBox -681.68900 -1255.79350 3105.17400 3285.21000
+zoomBox -234.73950 -752.04100 2501.26900 2528.83400
+zoomBox -60.18800 -555.30550 2265.41950 2233.43850
+pan -522.68300 -905.32450
+checkPlace RPT/mau.checkPlace.rpt
+zoomBox -309.69600 -563.40900 1118.51800 1149.22900
+zoomBox -582.87150 -965.51300 1742.73650 1823.23200
+zoomBox -309.69650 -563.40900 1118.51800 1149.22950
+zoomBox -244.48250 -467.41600 969.50000 988.32700
+zoomBox -140.49550 -313.59150 736.60700 738.18300
+zoomBox -99.88450 -253.51700 645.65300 640.49150
+zoomBox -388.41100 -680.32350 1291.84400 1334.54850
+zoomBox -1038.67600 -1642.23600 2748.19700 2898.77950
+zoomBox -840.71400 -1378.01700 2378.12850 2481.84650
+zoomBox -672.44650 -1153.43100 2063.57000 2127.45350
+selectMarker 58.3000 58.3000 174.9000 174.9000 -1 12 97
+zoomBox -810.49500 -1380.76500 2408.34800 2479.09950
+zoomBox -674.50750 -1155.49200 2061.50950 2125.39300
+zoomBox -810.49600 -1380.76600 2408.34800 2479.09950
+zoomBox -460.66650 -801.25050 1516.10600 1569.18950
+zoomBox -194.54000 -360.39450 837.34800 876.99050
+zoomBox -113.89050 -226.79200 631.64900 667.21900
+zoomBox -37.34650 -113.74950 351.83000 352.93000
+zoomBox -0.92000 -57.53250 202.23300 186.07750
+pan -63.86450 -84.35450
+zoomBox -138.56600 -219.16900 319.29050 329.86800
+zoomBox -342.70500 -476.38400 689.18950 761.00850
+zoomBox -407.46300 -557.97900 806.53050 897.77700
+pan 359.19000 53.25550
+zoomBox 106.32200 -209.60800 851.86600 684.40850
+zoomBox 201.26250 -120.80550 659.12000 428.23250
+zoomBox 273.17550 -51.07250 512.18050 235.52950
+zoomBox 294.96850 -29.94000 467.65000 177.13050
+zoomBox 201.26050 -120.80800 659.12100 428.23400
+zoomBox 12.63400 -304.53400 1044.53700 932.86900
+zoomBox -201.34000 -512.05250 1478.94150 1502.85150
+zoomBox -549.76100 -849.96100 2186.29700 2430.97350
+zoomBox -709.10300 -1004.49550 2509.78900 2855.42750
+zoomBox -411.77900 -717.33700 1913.87050 2071.45750
+deselectAll
+setDesignMode -process 180
+timeDesign -preCTS -pathReports -drvReports -slackreports -numPaths 1 -prefix mau_preCTS -outDir RPT
+optDesign -preCTS
+saveDesign DBS/mau_place.enc
+ccopt_design -cts
